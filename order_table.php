@@ -63,13 +63,10 @@
           <?php endforeach; ?>    
         </tbody>
       </table>
-<br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br>
 
-     
     <?php include_once "includes/footer.html"; ?> 
- 
     </main>
-    
       <?php include_once "includes/scripts.html"; ?>   
       <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script> 
   
