@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr">            
+
+
+
   <?php include_once "includes/head.html"; ?>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
