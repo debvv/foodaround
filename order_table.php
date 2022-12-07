@@ -68,7 +68,6 @@
     <?php include_once "includes/footer.html"; ?> 
     </main>
       <?php include_once "includes/scripts.html"; ?>   
-      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script> 
-  
+      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script>       
     </body>
 </html>
