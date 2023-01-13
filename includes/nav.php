@@ -29,7 +29,7 @@
                     {}
                     else{
                         ?>
-                        <li><a href="users.php">chat</a></li>
+                        <!-- <li><a href="users.php">chat</a></li> -->
                         <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">support</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="contact1.php">leave feedback</a></li>

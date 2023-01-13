@@ -1,5 +1,8 @@
+<?php include_once "includes/header.php"; ?>
+<body>
+<?php include_once "includes/nav.php"; ?>
 <?php 
-  session_start();
+  // session_start();
   include_once "assets/php/config.php";
   if(!isset($_SESSION['unique_id'])){
     header("location: login.php");
@@ -8,8 +11,6 @@
  //    header("location: ../index.php");
  // }
 ?>
-<?php include_once "includes/header.php"; ?>
-<body>
   <div class="wrapper">
     <section class="users">
       <header>

@@ -1,12 +1,13 @@
+<?php include_once "includes/header.php"; ?>
+<body>
 <?php 
-  session_start();
+  include_once "includes/nav.php";
+  // session_start();
   include_once "assets/php/config.php";
   if(!isset($_SESSION['unique_id'])){
     header("location: login.php");
   }
 ?>
-<?php include_once "includes/header.php"; ?>
-<body>
   <div class="wrapper">
     <section class="chat-area">
       <header>
@@ -16,10 +17,10 @@
           if(mysqli_num_rows($sql) > 0){
             $row = mysqli_fetch_assoc($sql);
           }else{
-            header("location: users.php");
+            header("location: index.php");
           }
         ?>
-        <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+        <!-- <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a> -->
         <img src="assets/images/chat_images/<?php echo $row['img']; ?>" alt="">
         <div class="details">
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>

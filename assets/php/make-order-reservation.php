@@ -85,7 +85,7 @@
             $insert_query_order = mysqli_query($conn, "INSERT INTO `orders`(`time_date`, `name`, `from_id`, 
             `product`, `description`, `count`, `email`, `address`, `name_cul`, `accepted`) 
             VALUES ('{$date},{$time}','$name','{$_SESSION['unique_id']}','$product','$description','$people',
-            '$email','$address','None, you can accept this task','1233085864')");
+            '$email','$address','None, you can accept this task', 0)");
 
 
             echo $result;

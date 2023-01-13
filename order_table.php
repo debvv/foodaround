@@ -11,10 +11,15 @@
 
       <br> <br> <br> <br> <br> 
       <?php
-      $dbh = new PDO('mysql:dbname=chatapp; host=localhost', 'root', '');
-      $sth = $dbh->prepare("SELECT * FROM `orders` WHERE accepted=1233085864 "); //def: select * from orders
-      $sth->execute();
-      $list = $sth->fetchAll(PDO::FETCH_ASSOC);
+      // $dbh = new PDO('mysql:dbname=chatapp; host=localhost', 'root', '');
+      // $sth = $dbh->prepare("SELECT * FROM `orders` WHERE accepted=1233085864 "); //def: select * from orders
+      // $sth->execute();
+      // $list = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+      if(!isset($_SESSION['unique_id'])){
+        header("location: index.php");
+      }
+      $sql = mysqli_query($conn, "SELECT * FROM orders WHERE accepted={$_SESSION['unique_id']}");  // принятые заказы
       ?>
 
       <div class="row">
@@ -42,7 +47,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($list as $row): ?>
+          <?php foreach ($sql as $row): ?>
           <tr>
             <td><?php echo $row['id_order']; ?></td>
             <td><?php echo $row['time_date']; ?></td>
@@ -56,8 +61,7 @@
             <td><?php echo $row['name_cul']; ?></td>
             <!-- <td><php echo $row['accepted']; ?></td> -->
             <td>
-              <a class='btn btn-success btn-sm' href='../php-crud/messages-edit.php?msg_id=$row[msg_id]'> accept</a>
-							<a class='btn btn-primary btn-sm' href='../php-crud/messages-delete.php?msg_id=$row[msg_id]'> text </a>
+							<a class='btn btn-primary btn-sm' href="chat.php?unique_id=<?php echo $row['from_id']; ?>"> text </a>
             </td>
           </tr>
           <?php endforeach; ?>    
