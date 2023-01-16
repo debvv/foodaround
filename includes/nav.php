@@ -51,7 +51,8 @@
                                 <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">admin room</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="assets/php-crud/messages-index.php">crud Messages</a></li>
-                                        <li><a href="index.php">crud2</a></li>
+                                        <li><a href="assets/php-crud/users-index.php">crud Users</a></li>
+                                        <li><a href="assets/php-crud/order-index.php">crud Orders</a></li>
                                     </ul>
                                 </li>
                             </ul>

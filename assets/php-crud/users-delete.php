@@ -1,14 +1,14 @@
 <?php
 
-if (isset($_GET["msg_id"])) {
-    $msg_id = $_GET["msg_id"];
+if (isset($_GET["unique_id"])) {
+    $unique_id = $_GET["unique_id"];
 
     include_once "../php/config.php";
     
-    $sql = "DELETE FROM messages WHERE msg_id=$msg_id";
+    $sql = "DELETE FROM users WHERE unique_id=$unique_id";
     
     $conn->query($sql);
 }
-header("location: messages-index.php");
+header("location: users-index.php");
 exit;
 ?>

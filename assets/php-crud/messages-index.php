@@ -12,7 +12,7 @@
 		<h2>List of Messages</h2>
 		<a class="btn btn-primary" href="messages-create.php" role="button">New Message</a>
 		<br>
-		<table class="table table-bordered" , class="table table-striped">
+		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<th>⠀⠀⠀ID⠀⠀⠀</th>
