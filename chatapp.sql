@@ -128,8 +128,7 @@ CREATE TABLE `orders` (
   `description` varchar(255) NOT NULL,
   `count` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `name_cul` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,  
   `accepted` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -137,15 +136,15 @@ CREATE TABLE `orders` (
 -- Дамп данных таблицы `orders`
 --
 
-INSERT INTO `orders` (`id_order`, `time_date`, `name`, `from_id`, `product`, `description`, `count`, `email`, `address`, `name_cul`, `accepted`) VALUES
-(3, '2022-11-30 15:03:00', 'Tester', 1527932594, 'пирожочки', 'с мясом', 6, 'zozo@yahoo.com', 'Decebal 6-3', 'None, you can accept this task', 1525781292),
-(4, '0000-00-00 00:00:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 'None, you can accept this task', 0),
-(5, '0000-00-00 00:00:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 'None, you can accept this task', 0),
-(6, '2022-11-26 12:44:00', 'Artur', 1527932594, 'пирожочки', 'с мясом', 45, 'eugeniu.casian@iis.utm.md', 'decebal street', 'None, you can accept this task', 0),
-(7, '2023-01-06 08:15:00', 'алекс', 767869359, 'лазанья', 'классическая лазания', 1, 'alex@mail.ru', 'chisinau bd. moscova 21', 'None, you can accept this task', 1527932594),
-(9, '2023-01-11 08:00:00', 'alex', 767869359, 'ктлетки', 'из свиноговяжего фарша', 2, 'alex@mail.ru', 'burebista 12', 'None, you can accept this task', 0),
-(10, '2023-01-13 15:00:00', 'alex', 767869359, 'пирожки', 'с кортошкой', 5, 'alex@mail.ru', 'burebista 12', 'None, you can accept this task', 1525781292),
-(11, '2023-01-19 15:32:00', 'admin', 1527932594, 'пирожочки', 'с мясом', 6, 'jenea983@mail.ru', 'decebal street', 'None, you can accept this task', 0);
+INSERT INTO `orders` (`id_order`, `time_date`, `name`, `from_id`, `product`, `description`, `count`, `email`, `address`, `accepted`) VALUES
+(3, '2022-11-30 15:03:00', 'Tester', 1527932594, 'пирожочки', 'с мясом', 6, 'zozo@yahoo.com', 'Decebal 6-3', 1525781292),
+(4, '0000-00-00 00:00:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 0),
+(5, '0000-00-00 00:00:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
+(6, '2022-11-26 12:44:00', 'Artur', 1527932594, 'пирожочки', 'с мясом', 45, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
+(7, '2023-01-06 08:15:00', 'алекс', 767869359, 'лазанья', 'классическая лазания', 1, 'alex@mail.ru', 'chisinau bd. moscova 21', 1527932594),
+(9, '2023-01-11 08:00:00', 'alex', 767869359, 'ктлетки', 'из свиноговяжего фарша', 2, 'alex@mail.ru', 'burebista 12', 0),
+(10, '2023-01-13 15:00:00', 'alex', 767869359, 'пирожки', 'с кортошкой', 5, 'alex@mail.ru', 'burebista 12', 1525781292),
+(11, '2023-01-19 15:32:00', 'admin', 1527932594, 'пирожочки', 'с мясом', 6, 'jenea983@mail.ru', 'decebal street', 0);
 
 -- --------------------------------------------------------
 
