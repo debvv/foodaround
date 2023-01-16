@@ -23,15 +23,15 @@
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-2">FoodAround is TEXT TEXT2 TEXT3<br>text4 text5 text6</div><a class="btn btn-border-w btn-round" href="about.php">Discover food industry</a>
+                  <div class="font-alt mb-30 titan-title-size-2">FoodAround is a project<br>that is aimed at people and for people</div><a class="btn btn-border-w btn-round" href="about.php">Discover food industry</a>
                 </div>
               </div>
             </li>
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-1"> Take a look at</div>
-                  <div class="font-alt mb-40 titan-title-size-3">our specialities</div><a class="section-scroll btn btn-border-w btn-round" href="#specialities">Learn More</a>
+                  <div class="font-alt mb-30 titan-title-size-1"> Take a look on</div>
+                  <div class="font-alt mb-40 titan-title-size-3">our functionality</div><a class="section-scroll btn btn-border-w btn-round" href="#specialities">Learn More</a>
                 </div>
               </div>
             </li>
