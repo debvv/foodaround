@@ -138,8 +138,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id_order`, `time_date`, `name`, `from_id`, `product`, `description`, `count`, `email`, `address`, `accepted`) VALUES
 (3, '2022-11-30 15:03:00', 'Tester', 1527932594, 'пирожочки', 'с мясом', 6, 'zozo@yahoo.com', 'Decebal 6-3', 1525781292),
-(4, '0000-00-00 00:00:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 0),
-(5, '0000-00-00 00:00:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
+(4, '2022-11-30 17:03:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 0),
+(5, '2022-11-30 19:03:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
 (6, '2022-11-26 12:44:00', 'Artur', 1527932594, 'пирожочки', 'с мясом', 45, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
 (7, '2023-01-06 08:15:00', 'алекс', 767869359, 'лазанья', 'классическая лазания', 1, 'alex@mail.ru', 'chisinau bd. moscova 21', 1527932594),
 (9, '2023-01-11 08:00:00', 'alex', 767869359, 'котлетки', 'из свиноговяжего фарша', 2, 'alex@mail.ru', 'burebista 12', 0),
