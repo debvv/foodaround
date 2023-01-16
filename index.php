@@ -14,7 +14,7 @@
         <div class="titan-caption">
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">automatic reception system | food delivery</div>
-            <div class="font-alt mb-40 titan-title-size-4">Order safely</div><a class="section-scroll btn btn-border-w btn-round" href="#demos"> choose a dish </a>
+            <div class="font-alt mb-40 titan-title-size-4">Order safely</div><a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> choose a dish </a>
             <br><br><!-- <a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> make an order </a>  --> 
             <!-- ссылку на заполнение формы потребителями далее вставить -->
           </div>

@@ -33,7 +33,7 @@
                         <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">support</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="contact1.php">leave feedback</a></li>
-                                <li><a href="index.php">contact online support</a></li>
+                                <!-- <li><a href="index.php">contact online support</a></li> -->
                                 <!--  <li><a href="index.php">login as technical support</a></li>               -->
                             </ul>
                         </li>
