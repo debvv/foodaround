@@ -44,7 +44,7 @@
             <th>кол-во порций</th>
             <th>email пользователя</th>
             <th>адресс</th>
-            <th>статус</th>
+            <!-- <th>статус</th> -->
             <!-- <th>Id повара</th> -->
             <th>взаимодействие</th>
           </tr>
@@ -61,7 +61,7 @@
             <td><?php echo $row['count']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['address']; ?></td>
-            <td><?php echo $row['name_cul']; ?></td>
+            <!-- <td><php echo $row['name_cul']; ?></td> -->
             <!-- <td><php echo $row['accepted']; ?></td> -->
             <td>
               <a class='btn btn-success btn-sm accept' href="assets/php/accept_order.php?id_order=<?php echo $row['id_order']; ?>"> Accept</a>

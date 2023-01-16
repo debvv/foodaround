@@ -42,7 +42,7 @@
             <th>кол-во порций</th>
             <th>email пользователя</th>
             <th>адресс</th>
-            <th>статус</th>
+            <!-- <th>статус</th> -->
             <th>чат</th>
           </tr>
         </thead>
@@ -60,7 +60,7 @@
             <td><?php echo $row['count']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['address']; ?></td>
-            <td><?php echo $row['name_cul']; ?></td>
+            <!-- <td><php echo $row['name_cul']; ?></td> -->
             <!-- <td><?php echo $row['accepted']; ?></td> -->
             <?php
             if(!$row['accepted'] == 0)
