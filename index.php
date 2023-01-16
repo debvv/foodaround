@@ -14,7 +14,20 @@
         <div class="titan-caption">
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">automatic reception system | food delivery</div>
+            <?php
+            if(!isset($_SESSION['unique_id']))
+            {
+            ?>
+            <div class="font-alt mb-40 titan-title-size-4">Order safely</div><a class="section-scroll btn btn-border-w btn-round" href="#"> choose a dish </a>
+            <?php
+            }
+            else
+            {
+            ?>
             <div class="font-alt mb-40 titan-title-size-4">Order safely</div><a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> choose a dish </a>
+            <?php
+            }
+            ?>            
             <br><br><!-- <a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> make an order </a>  --> 
             <!-- ссылку на заполнение формы потребителями далее вставить -->
           </div>
