@@ -42,3 +42,4 @@
 
 </body>
 </html>
+<?php include_once "includes/scripts.html"; ?>
