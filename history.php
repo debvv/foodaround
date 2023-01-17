@@ -1,9 +1,11 @@
 <?php
       include_once "assets/php/config.php";
-      if(!isset($_SESSION['unique_id'])){
-        // header("location: index.php");
-      }
-      $sql = mysqli_query($conn, "SELECT * FROM `orders` WHERE from_id=1527932594 "); // заказы клиента
+    //   if(!isset($_SESSION['unique_id'])){
+    //     // header("location: index.php");
+    //   }
+    
+    //   $conn = mysqli_connect("localhost", "root", "", "chatapp");
+      $sql = mysqli_query($conn, "SELECT * FROM `orders` WHERE from_id={$_SESSION['unique_id']}  "); // заказы клиента
 
       ?>
 

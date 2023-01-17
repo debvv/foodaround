@@ -19,7 +19,7 @@
                     url: "history.php",
                     type: "GET",                    
                     dataType: "html",
-                    success: function(data) { //если запрос успещен
+                    success: function(data) { //если запрос успешен
                         // Получаем ответ с сервера с помощью ajax
                         // console.log(data);
                         // console.log(data.responseText);
@@ -35,8 +35,8 @@
             }, 1000);
         });
     </script>
-      <php -->
-       // $dbh = new PDO('mysql:dbname=chatapp; host=localhost', 'root', '');
+      <!-- <php -->
+      <!-- // $dbh = new PDO('mysql:dbname=chatapp; host=localhost', 'root', '');
       // $sth = $dbh->prepare("SELECT * FROM 'orders' WHERE 'from_id'= $unique_id"); //def: select * from orders
       // $sth->execute();
       // $list = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@
       // }
       // $sql = mysqli_query($conn, "SELECT * FROM `orders` WHERE from_id={$_SESSION['unique_id']} "); // заказы клиента -->
 
-      ?>
+      <!-- ?> -->
 
       <!-- <div class="row"> -->
           <!-- <div class="col-sm-6 col-sm-offset-3">
