@@ -31,3 +31,5 @@ continueBtn.onclick = ()=>{ // Событие onclick происходит, ко
     xhr.send(formData); // метод send() объекта XMLHttpRequest позволяет отправить запрос на сервер. 
     //creating new FormData object, sending the form data to php
 }
+
+//в гайде и пишут что это аякс
