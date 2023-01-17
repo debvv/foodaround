@@ -83,9 +83,9 @@
 		include_once "config.php";
 
             $insert_query_order = mysqli_query($conn, "INSERT INTO `orders`(`time_date`, `name`, `from_id`, 
-            `product`, `description`, `count`, `email`, `address`, `name_cul`, `accepted`) 
+            `product`, `description`, `count`, `email`, `address`, `accepted`) 
             VALUES ('{$date},{$time}','$name','{$_SESSION['unique_id']}','$product','$description','$people',
-            '$email','$address','None, you can accept this task', 0)");
+            '$email','$address', 0)");
 
 
             echo $result;
