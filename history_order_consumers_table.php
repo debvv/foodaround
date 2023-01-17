@@ -1,5 +1,7 @@
 <?php
+      session_start();
       include_once "assets/php/config.php";
+ 
     //   if(!isset($_SESSION['unique_id'])){
     //     // header("location: index.php");
     //   }
@@ -45,7 +47,7 @@
             <td><?php echo $row['count']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['address']; ?></td>
-            <?php echo $row['accepted']; ?></td> -->
+            <!-- <php echo $row['accepted']; ?></td>  -->
             <?php
             if(!$row['accepted'] == 0)
             {?>
