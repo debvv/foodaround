@@ -58,27 +58,27 @@
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Pancakes.jpg" alt="Pancakes"></div>
-                  <h3 class="content-box-title font-serif">Pancakes</h3></a></div>
+                  <h3 class="content-box-title font-serif">Блины</h3></a></div>
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Sweets.jpg" alt="Sweets"></div>
-                  <h3 class="content-box-title font-serif">Sweets</h3></a></div>
+                  <h3 class="content-box-title font-serif">Сладости</h3></a></div>
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Porridge.jpg" alt="Porridge"></div>
-                  <h3 class="content-box-title font-serif">Porridge</h3></a></div>
+                  <h3 class="content-box-title font-serif">Овсянные каши</h3></a></div>
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Burgers.jpg" alt="Burgers"></div>
-                  <h3 class="content-box-title font-serif">Burgers</h3></a></div>
+                  <h3 class="content-box-title font-serif">Бургеры</h3></a></div>
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Meat.jpg" alt="Meat"></div>
-                  <h3 class="content-box-title font-serif">Meat</h3></a></div>
+                  <h3 class="content-box-title font-serif">Мясные изделия</h3></a></div>
 
               <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="#">
                   <div class="content-box-image"><img src="./assets/images/index/Rice.jpg" alt="Rice"></div>
-                  <h3 class="content-box-title font-serif">Rice</h3></a></div>
+                  <h3 class="content-box-title font-serif">Рис</h3></a></div>
               
             </div>
           </div>
