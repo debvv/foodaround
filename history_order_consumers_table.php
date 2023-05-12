@@ -13,7 +13,7 @@
 
       <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">history Order consumers</h2>
+              <h2 class="module-title font-alt">история заказов потребителя</h2>
                 <div class="module-subtitle font-serif"></div>
           </div>
       </div>

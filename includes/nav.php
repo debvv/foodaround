@@ -61,32 +61,32 @@
                     }
                 ?>
 
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">information</a> <!--добавить ссылку на каку либо инфрмацию-->
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">информация</a> <!--добавить ссылку на каку либо инфрмацию-->
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="general_information.php"><i class="fa fa-bolt"></i> general information</a></li>
+                    <li><a href="general_information.php"><i class="fa fa-bolt"></i> общая информация</a></li>
                     <?php
                     if (!isset($_SESSION['unique_id']))
                     {}
                     else if ($row['role'] == 'Consumer')
                     {
                         ?>
-                        <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> history order consumers</a></li>
+                        <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> история заказов потребителя</a></li>
                         <li><a href="make_order.php"><i class="fa fa-tasks"></i> make an order</a></li>
                         <?php
                     }
                     else if ($row['role'] == 'Culinary Specialist')
                     {
                         ?>
-                        <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> history order culinary</a></li>
+                        <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> история заказов кулинарного специалиста</a></li>
                         <li><a href="order_table.php"><i class="fa fa-list-alt"></i> check active orders</a></li>
                         <?php
                     }
                     else if ($row['role'] == 'Admin')
                     {
                         ?>
-                        <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> history order consumers</a></li>
+                        <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> история заказов потребителя</a></li>
                         <li><a href="make_order.php"><i class="fa fa-tasks"></i> make an order</a></li>
-                        <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> history order culinary</a></li>
+                        <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> история заказов кулинарного специалиста</a></li>
                         <li><a href="order_table.php"><i class="fa fa-list-alt"></i> check active orders</a></li>
                         <?php
                     }
