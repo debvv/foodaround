@@ -108,7 +108,7 @@
                             </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="assets/php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a></li>
+                            <li><a href="assets/php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">выход</a></li>
                         </ul>
                             </a>
                         <?php
