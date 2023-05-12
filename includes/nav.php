@@ -71,23 +71,23 @@
                     {
                         ?>
                         <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> история заказов потребителя</a></li>
-                        <li><a href="make_order.php"><i class="fa fa-tasks"></i> make an order</a></li>
+                        <li><a href="make_order.php"><i class="fa fa-tasks"></i> оформление заказа</a></li>
                         <?php
                     }
                     else if ($row['role'] == 'Culinary Specialist')
                     {
                         ?>
                         <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> история заказов кулинарного специалиста</a></li>
-                        <li><a href="order_table.php"><i class="fa fa-list-alt"></i> check active orders</a></li>
+                        <li><a href="order_table.php"><i class="fa fa-list-alt"></i> активные заказы потребителей</a></li>
                         <?php
                     }
                     else if ($row['role'] == 'Admin')
                     {
                         ?>
                         <li><a href="history_order_consumers.php"><i class="fa fa-bolt"></i> история заказов потребителя</a></li>
-                        <li><a href="make_order.php"><i class="fa fa-tasks"></i> make an order</a></li>
+                        <li><a href="make_order.php"><i class="fa fa-tasks"></i> оформление заказа</a></li>
                         <li><a href="history_order_culinary.php"><i class="fa fa-link fa-sm"></i> история заказов кулинарного специалиста</a></li>
-                        <li><a href="order_table.php"><i class="fa fa-list-alt"></i> check active orders</a></li>
+                        <li><a href="order_table.php"><i class="fa fa-list-alt"></i> активные заказы потребителей</a></li>
                         <?php
                     }
                     ?>

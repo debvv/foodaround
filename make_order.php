@@ -60,7 +60,7 @@
             <div class="col-xs-12 col-md-6 side-image-text">
               <div class="row">
                 <div class="col-sm-12">
-                  <h2 class="module-title font-alt align-left">make an order</h2>
+                  <h2 class="module-title font-alt align-left">оформление заказа</h2>
                   <p class="module-subtitle font-serif align-left">We are glad to welcome you on the order filling page. As soon as all the fields are filled in correctly, the application will be sent to our culinary specialists, who will be able to accept it and discuss all the nuances with you personally in a personal chat.</p>
                 </div>
               </div>

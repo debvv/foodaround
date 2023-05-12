@@ -28,7 +28,7 @@
             <?php
             }
             ?>            
-            <br><br><!-- <a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> make an order </a>  --> 
+            <br><br><!-- <a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> оформление заказа </a>  --> 
             <!-- ссылку на заполнение формы потребителями далее вставить -->
           </div>
         </div>
