@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FoodAround Chat Application</title>
+  <title>FoodAround</title>
   <link rel="stylesheet" href="./assets/css/register-login.css"> 
   <!-- css form -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -64,7 +64,7 @@
                 <!-- </ul> -->
               </li>
                 <li class="dropdown">
-                    <a href="login.php" >Login</a>               
+                    <a href="login.php" >Авторизация</a>               
                 </li>                       
             </ul>
           </div>
@@ -73,23 +73,24 @@
       
   <div class="wrapper">
     <section class="form login">
-      <header>FoodAround Chat Application</header>
+      <header>Авторизация в FoodAround</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="field input">
-          <label>Email Address</label>
+          <label>Введите электронную почту</label>
           <input type="text" name="email" placeholder="Enter your email" required>
         </div>
         <div class="field input">
-          <label>Password</label>
+          <label>Введите пароль</label>
           <input type="password" name="password" placeholder="Enter your password" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+          <input type="submit" name="submit" value="Войти в систему">
         </div>
       </form>
-      <div class="link">Not yet signed up? <a href="register.php">Signup now</a></div>
+      <div class="link">Ещё не зарегистрированы? <a href="register.php"> 
+      <br>  <b>Зарегистрируйтесь прямо сейчас </b></a></div>
     </section>
   </div>
   

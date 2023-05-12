@@ -97,7 +97,7 @@
                         <?php
                         if(!isset($_SESSION['unique_id'])) {
                             ?>
-                            <a href="login.php" >Login</a>
+                            <a href="login.php" >Авторизация</a>
                         <?php
                         }
                         else {

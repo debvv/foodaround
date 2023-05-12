@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FoodAround Chat Application</title>
+  <title>Регистрация в FoodAround</title>
   <link rel="stylesheet" href="./assets/css/register-login.css"> 
   <!-- css form -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -67,7 +67,7 @@
                 <!-- </ul> -->
               </li>
                 <li class="dropdown">
-                    <a href="login.php" >Login</a>               
+                    <a href="login.php" >Авторизация</a>               
                 </li>                       
             </ul>
           </div>
@@ -76,46 +76,46 @@
   <!-- nav second include closed-->
   <div class="wrapper">
     <section class="form signup">
-      <header>FoodAround Chat Application</header>
+      <header>Регистрация в FoodAround</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="name-details">
           <div class="field input">
-            <label>First Name</label>
+            <label>Введите ваше имя</label>
             <input type="text" name="fname" placeholder="First name" required>
           </div>
           <div class="field input">
-            <label>Last Name</label>
+            <label>Введите вашу фамилию</label>
             <input type="text" name="lname" placeholder="Last name" required>
           </div>
 
         </div>
         <div class="field input">
-          <label>Email Address</label>
+          <label>Введите электронную почту</label>
           <input type="text" name="email" placeholder="Enter your email" required>
         </div>
 
         <div class="field selector" >
-          <label>Select your role</label>
+          <label>Выберите свою роль</label>
           <select id="selectrole" name="role">
-            <option value="Consumer">Consumer</option>
-            <option value="Culinary Specialist">Culinary Specialist</option>
+            <option value="Consumer">Потребитель</option>
+            <option value="Culinary Specialist">Кулинарный Специалист</option>
           </select>
         </div>
         <div class="field input">
-          <label>Password</label>
+          <label>Введите пароль</label>
           <input type="password" name="password" placeholder="Enter new password" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
-          <label>Select Image</label>
+          <label>Выберите фотографию</label>
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Continue to Chat">
         </div>
       </form>
-      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
+      <div class="link">Уже зарегистрировались?  <a href="login.php"><br><b>Авторизоваться сейчас</b></a></div>
     </section>
   </div>
 
