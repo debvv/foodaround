@@ -61,7 +61,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.php">home</a></li>
               <li><a href="about.php">about</a></li>
-              <!-- <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">information</a> 
+              <!-- <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">информация</a> 
                 <ul class="dropdown-menu" role="menu"> -->
                     <li><a href="general_information.php">general information</a></li>
                 <!-- </ul> -->

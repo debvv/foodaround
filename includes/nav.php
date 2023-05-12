@@ -30,9 +30,9 @@
                     else{
                         ?>
                         <!-- <li><a href="users.php">chat</a></li> -->
-                        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">support</a>
+                        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">поддержка</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="contact-leave-feedback.php">leave feedback</a></li>
+                                <li><a href="contact-leave-feedback.php">оставить обратную связь</a></li>
                                 <!-- <li><a href="index.php">contact online support</a></li> -->
                                 <!--  <li><a href="index.php">login as technical support</a></li>               -->
                             </ul>
@@ -46,13 +46,13 @@
                     else if ($row['role'] == 'Admin')
                     {
                        ?>
-                        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">admin</a>
+                        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Администрирование</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">admin room</a>
+                                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Админ комната</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="assets/php-crud/messages-index.php">crud Messages</a></li>
-                                        <li><a href="assets/php-crud/users-index.php">crud Users</a></li>
-                                        <li><a href="assets/php-crud/order-index.php">crud Orders</a></li>
+                                        <li><a href="assets/php-crud/messages-index.php">crud таблицы сообщений</a></li>
+                                        <li><a href="assets/php-crud/users-index.php">crud таблицы пользователей</a></li>
+                                        <li><a href="assets/php-crud/order-index.php">crud таблицы заказов</a></li>
                                     </ul>
                                 </li>
                             </ul>
