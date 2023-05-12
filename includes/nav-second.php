@@ -9,11 +9,11 @@
               <li><a href="about.php">О НАС</a></li>
               <!-- <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">информация</a> 
                 <ul class="dropdown-menu" role="menu"> -->
-                    <li><a href="general_information.php">general information</a></li>
+                    <li><a href="general_information.php">общая информация</a></li>
                 <!-- </ul> -->
               </li>
                 <li class="dropdown">
-                    <a href="login.php" >Login</a>               
+                    <a href="login.php" >авторизация</a>               
                 </li>                       
             </ul>
           </div>
