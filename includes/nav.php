@@ -21,8 +21,8 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">home</a></li>
-              <li><a href="about.php">about</a></li>
+              <li><a href="index.php">ГЛАВНАЯ</a></li>
+              <li><a href="about.php">О НАС</a></li>
 
                 <?php
                     if (!isset($_SESSION['unique_id']))

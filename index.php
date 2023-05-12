@@ -18,13 +18,13 @@
             if(!isset($_SESSION['unique_id']))
             {
             ?>
-            <div class="font-alt mb-40 titan-title-size-4">ЗАКАЗЫВАЙТЕ БЕЗОПАСНО</div><a class="section-scroll btn btn-border-w btn-round" href="#"> выбрать блюдо </a>
+            <div class="font-alt mb-40 titan-title-size-4">ЗАКАЗЫВАЙТЕ БЕЗОПАСНО</div><a class="section-scroll btn btn-border-w btn-round" href="#"> ПЕРЕЙТИ К ОФОРМЛЕНИЮ ЗАКАЗА </a>
             <?php
             }
             else
             {
             ?>
-            <div class="font-alt mb-40 titan-title-size-4">ЗАКАЗЫВАЙТЕ БЕЗОПАСНО</div><a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> выбрать блюдо </a>
+            <div class="font-alt mb-40 titan-title-size-4">ЗАКАЗЫВАЙТЕ БЕЗОПАСНО</div><a class="section-scroll btn btn-border-w btn-round" href="make_order.php"> ПЕРЕЙТИ К ОФОРМЛЕНИЮ ЗАКАЗА </a>
             <?php
             }
             ?>            
