@@ -11,8 +11,8 @@
         <div class="titan-caption">
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">УЛУЧШАЙТЕ СВОЙ РАЦИОН ВМЕСТЕ С НАМИ</div>
-            <div class="font-alt mb-40 titan-title-size-3">Делаем процесс заказа еды <span class="rotate">легче | проще | быстрее </span>
-            </div><a class="section-scroll btn btn-border-w btn-circle" href="#about"> Подробнее </a>
+            <div class="font-alt mb-40 titan-title-size-3">Делаем процесс заказа еды <span class="rotate">легче | проще | быстрее  </span>
+            </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Подробнее</a>
           </div>
         </div>
       </section>
@@ -23,25 +23,25 @@
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lightbulb"></span></div>
-                  <h3 class="features-title font-alt">идеи и концепции</h3>наша кухня - это уникальная служба доставки еды
+                  <h3 class="features-title font-alt">ИДЕИ И КОНЦЕПЦИИ</h3>Мы всегда готовы выслушать ваши идеи и предложения по улучшению
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="features-title font-alt">дизайн</h3>С лучшей командой мы создали онлайн-кухню с простым и дружелюбным дизайном
+                  <h3 class="features-title font-alt">ДИЗАЙН</h3>С лучшей командой мы создали онлайн-кухню с простым и дружелюбным дизайном
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="features-title font-alt">Техническая поддержка </h3>Наша служба технической поддержки всегда готова прийти на помощь
+                  <h3 class="features-title font-alt">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h3>Наша служба технической поддержки всегда готова прийти на помощь
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lifesaver"></span></div>
-                  <h3 class="features-title font-alt">Концентрация на главном</h3>Наша главная цель - удовлетворение потребностей клиентов
+                  <h3 class="features-title font-alt">КОНЦЕНТРАЦИЯ НА ГЛАВНОМ</h3>Наша главная цель - удовлетворение потребностей клиентов
                 </div>
               </div>
             </div>
