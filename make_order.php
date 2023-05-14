@@ -70,7 +70,7 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name."/>
+                    <input class="form-control input-lg" type="text" id="name" name="name" placeholder="Ваше имя" required="required" data-validation-required-message="Пожалуйста введите своё имя."/>
                   </div>
                 </div>  
               
@@ -85,7 +85,7 @@
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-clock"></i></div>
                     <select class="form-control input-lg" id="time" name="time" type="text" required="required">
-                      <option value="time" disabled="" selected="">Select Time</option>
+                      <option value="time" disabled="" selected="">Выберите время доставки</option>
                       <input class="form-control input-lg" type="time" id="time" name="time" min="09:00" max="18:00" required>
                     </select>
                   </div>
@@ -94,40 +94,41 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="product" name="product" placeholder="Your order name" required="required" data-validation-required-message="Please enter your order name."/>
+                    <input class="form-control input-lg" type="text" id="product" name="product" placeholder="Название продукта/товара/изделия" required="required" data-validation-required-message="Введите название желаемого продукта/товара/изделия."/>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="description" name="description" placeholder="Your order description" required="required" data-validation-required-message="Please enter your order description."/>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="icon-profile-male"></i></div>
-                    <input class="form-control input-lg" id="people" type="number" name="people" min="1" max="50" step="1" placeholder="Number of portions" required=""/>
+                    <input class="form-control input-lg" type="text" id="description" name="description" placeholder="Описание вашего заказа" required="required" data-validation-required-message="Введите описание вашего заказа."/>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                    <!-- <i class="icon-profile-male"></i></div> -->
+                    <input class="form-control input-lg" id="people" type="number" name="people" min="1" max="50" step="1" placeholder="Количество порций/единиц" required=""/>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="address" name="address" placeholder="Your Address" required="required" data-validation-required-message="Please enter address."/>
+                    <input class="form-control input-lg" type="email" id="email" name="email" placeholder="Ваша электронная почта" required="required" data-validation-required-message="Пожалуйста введите вашу электронную почту."/>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"><i class="fa fa-paper-plane-o"></i> Reserve</button>
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="icon-envelope"></i></div>
+                    <input class="form-control input-lg" type="text" id="address" name="address" placeholder="Ваш домашний адрес" required="required" data-validation-required-message="Пожалуйста введите свой домашний адрес."/>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"><i class="fa fa-paper-plane-o"></i> Зарезервировать</button>
                 </div>          
                 <div id="reservationFormResponse"></div>
               </form>
@@ -140,7 +141,7 @@
      <!--    <section id="map-section">
           <div id="map"></div>
         </section> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.9306443295363!2d28.86097301547899!3d47.061210833486314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d1fa98a70d9:0x820421c55fbd8790!2zU3RyYWRhIFN0dWRlbsibaWxvciAzLzEsIENoaciZaW7Eg3UsIE1vbGRvdmE!5e0!3m2!1sro!2s!4v1655477617350!5m2!1sro!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.9306443295363!2d28.86097301547899!3d47.061210833486314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d1fa98a70d9:0x820421c55fbd8790!2zU3RyYWRhIFN0dWRlbsibaWxvciAzLzEsIENoaciZaW7Eg3UsIE1vbGRvdmE!5e0!3m2!1sro!2s!4v1655477617350!5m2!1sro!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
 
         <hr class="divider-d">

@@ -4,17 +4,17 @@
 
 	// Check if name has been entered
 	if (!isset($_POST['name'])) {
-		$errors['name'] = 'Please enter your name';
+		$errors['name'] = 'Пожалуйста введите своё имя';
 	}
 
 	// Check if email has been entered and is valid
 	if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$errors['email'] = 'Please enter a valid email address';
+		$errors['email'] = 'Пожалуйста введите действующую электронную почту';
 	}
 
 	//Check if message has been entered
 	if (!isset($_POST['message'])) {
-		$errors['message'] = 'Please enter your message';
+		$errors['message'] = 'Пожалуйста введите ваше сообщение';
 	}
 
 	$errorOutput = '';
@@ -56,7 +56,7 @@
 	if (mail ($to, $subject, $body, $headers)) {
 		$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
  		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-		$result .= 'Thank You! I will be in touch';
+		$result .= 'Спасибо! Мы будем на связи.';
 		$result .= '</div>';
 //      	
 		session_start();
@@ -77,7 +77,7 @@
 	$result = '';
 	$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
 	$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-	$result .= 'Something bad happend during sending this message. Please try again later';
+	$result .= 'Что-то плохое произошло во время отправки этого сообщения. Пожалуйста, попробуйте еще раз позже.';
 	$result .= '</div>';
 
 	echo $result;
