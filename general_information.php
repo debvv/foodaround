@@ -10,9 +10,9 @@
       <section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="./assets/images/index/general-info.jpg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">Improve your diet with us</div>
-            <div class="font-alt mb-40 titan-title-size-3">Make Food <span class="rotate">easy | simple </span>
-            </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a>
+            <div class="font-alt mb-30 titan-title-size-1">УЛУЧШАЙТЕ СВОЙ РАЦИОН ВМЕСТЕ С НАМИ</div>
+            <div class="font-alt mb-40 titan-title-size-3">Делаем процесс заказа еды <span class="rotate">легче | проще | быстрее </span>
+            </div><a class="section-scroll btn btn-border-w btn-circle" href="#about"> Подробнее </a>
           </div>
         </div>
       </section>
@@ -23,25 +23,25 @@
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lightbulb"></span></div>
-                  <h3 class="features-title font-alt">Ideas and concepts</h3>Our kitchen is a unique food delivery service
+                  <h3 class="features-title font-alt">идеи и концепции</h3>наша кухня - это уникальная служба доставки еды
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="features-title font-alt">Designs</h3>With the best team we have created a online kitchen with a simple and friendly design
+                  <h3 class="features-title font-alt">дизайн</h3>С лучшей командой мы создали онлайн-кухню с простым и дружелюбным дизайном
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="features-title font-alt">Technical support </h3>Our technical support is always ready to help
+                  <h3 class="features-title font-alt">Техническая поддержка </h3>Наша служба технической поддержки всегда готова прийти на помощь
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lifesaver"></span></div>
-                  <h3 class="features-title font-alt">Focus on essentials</h3>Our main goal is customer satisfaction
+                  <h3 class="features-title font-alt">Концентрация на главном</h3>Наша главная цель - удовлетворение потребностей клиентов
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container my-5">
-		<h2>List of Users</h2>
+		<h2>CRUD - Таблица Users [ Пользователи ]</h2>
 		<br>
 		<table class="table table-bordered table-striped">
 			<thead>

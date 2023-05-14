@@ -108,7 +108,7 @@ else{
 		<form method="post">
             <input type="hidden" name="id_order" value="<?php echo $id_order; ?>">
 			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label">Tame Date</label>
+				<label class="col-sm-3 col-form-label">Time Date</label>
 				<div class="col-sm-6">
 					<input type="text" class="form-control" name="time_date" value="<?php echo $time_date; ?>">
 				</div>			

@@ -52,7 +52,7 @@
             if(!$row['accepted'] == 0)
             {?>
               <td>
-                <a class='btn btn-primary btn-sm' href="chat.php?unique_id=<?php echo $row['accepted']; ?>"> text </a>
+                <a class='btn btn-primary btn-sm' href="chat.php?unique_id=<?php echo $row['accepted']; ?>"> Связаться </a>
               </td><?php
             }
             else{?>

@@ -42,7 +42,7 @@
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['address']; ?></td>
             <td>
-			<a class='btn btn-primary btn-sm' href="chat.php?unique_id=<?php echo $row['from_id']; ?>"> text </a>
+			<a class='btn btn-primary btn-sm' href="chat.php?unique_id=<?php echo $row['from_id']; ?>"> Связаться  </a>
             </td>
           </tr>
           <?php endforeach; ?>    

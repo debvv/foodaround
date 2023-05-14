@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container my-5">
-		<h2>List of Messages</h2>
+		<h2>CRUD - Таблица Messages [ Сообщения ]</h2>
 		<a class="btn btn-primary" href="messages-create.php" role="button">New Message</a>
 		<br>
 		<table class="table table-bordered table-striped">

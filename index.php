@@ -47,7 +47,7 @@
                 </div>
               </div>
               <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="register.php"> Sign up</a></div>
+                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="register.php"> Присоединиться </a></div>
               </div>
             </div>
           </div>

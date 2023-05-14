@@ -15,23 +15,23 @@
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-1"> Hello & welcome</div>
-                  <div class="font-alt mb-40 titan-title-size-4">We are FoodAround</div><a class="section-scroll btn btn-border-w btn-round" href="#menu">Check Our Menu</a>
+                  <div class="font-alt mb-30 titan-title-size-1">  Приветствуем & добро пожаловать</div>
+                  <div class="font-alt mb-40 titan-title-size-4">Это приложение FoodAround</div><a class="section-scroll btn btn-border-w btn-round" href="#menu">Ознакомьтесь с нашим меню</a>
                 </div>
               </div>
             </li>
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-2">FoodAround is a project<br>that is aimed at people and for people</div><a class="btn btn-border-w btn-round" href="about.php">Discover food industry</a>
+                  <div class="font-alt mb-30 titan-title-size-2">FoodAround - это проект<br>который нацелен на людей и для людей</div><a class="btn btn-border-w btn-round" href="about.php">Познай фуд-индустрию</a>
                 </div>
               </div>
             </li>
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-1"> Take a look on</div>
-                  <div class="font-alt mb-40 titan-title-size-3">our functionality</div><a class="section-scroll btn btn-border-w btn-round" href="#specialities">Learn More</a>
+                  <div class="font-alt mb-30 titan-title-size-1"> Взгляните </div>
+                  <div class="font-alt mb-40 titan-title-size-3">на наш функционал</div><a class="section-scroll btn btn-border-w btn-round" href="#specialities">Узнать больше</a>
                 </div>
               </div>
             </li>
@@ -47,7 +47,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt mb-0">The Best Restaurant In Town. Enjoy Your Meal</h2>
+                <h2 class="module-title font-alt mb-0">Приятного аппетита</h2>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <h2 class="module-title font-alt align-left">оформление заказа</h2>
-                  <p class="module-subtitle font-serif align-left">We are glad to welcome you on the order filling page. As soon as all the fields are filled in correctly, the application will be sent to our culinary specialists, who will be able to accept it and discuss all the nuances with you personally in a personal chat.</p>
+                  <p class="module-subtitle font-serif align-left">Мы рады приветствовать вас на странице оформления заказа. Как только все поля будут заполнены правильно, заявка будет отправлена нашим кулинарам, которые смогут ее принять и обсудить все нюансы с вами лично в личном чате.</p>
                 </div>
               </div>
               
