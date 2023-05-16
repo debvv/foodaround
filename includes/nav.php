@@ -33,6 +33,15 @@
                         <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">поддержка</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="contact-leave-feedback.php">оставить обратную связь</a></li>
+                                <?php
+                                if ($row['role'] == 'Technical Specialist') {  ?>
+                                <li><a href="---.php">связаться с юзером</a></li>
+                                <?php   }       ?>
+                                
+                                <?php
+                                if ($row['role'] == 'Admin') {  ?>
+                                <li><a href="---.php">связаться с юзером</a></li>
+                                <?php   }       ?>
                                 <!-- <li><a href="index.php">contact online support</a></li> -->
                                 <!--  <li><a href="index.php">login as technical support</a></li>               -->
                             </ul>
