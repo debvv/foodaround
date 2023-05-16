@@ -50,8 +50,21 @@
         <section class="module pt-0 pb-0" id="about">
           <div class="row position-relative m-0">
             <div class="col-xs-12 col-md-6 side-image"></div>           
-        </section>        
+        </section>    
+        <!-- <section>
+          <details>
+            <summary>
+              vopros
+            </summary>
+            p
+          </details>
+        </section> -->
        <?php include_once "includes/footer.html"; ?>
+
+
+
+
+     
     </main>
        <?php include_once "includes/scripts.html"; ?>
   </body>
