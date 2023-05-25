@@ -1,6 +1,9 @@
+<?php
+include "includes/internal-languages.php";
+?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <?php include_once "includes/head.html"; ?>
+  <?php include_once "includes/head.php"; ?>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
 
@@ -60,7 +63,7 @@
             <div class="col-xs-12 col-md-6 side-image-text">
               <div class="row">
                 <div class="col-sm-12">
-                  <h2 class="module-title font-alt align-left">оформление заказа</h2>
+                  <h2 class="module-title font-alt align-left"><?=$lang['makeorder'] ?></h2>
                   <p class="module-subtitle font-serif align-left">Мы рады приветствовать вас на странице оформления заказа. Как только все поля будут заполнены правильно, заявка будет отправлена нашим кулинарам, которые смогут ее принять и обсудить все нюансы с вами лично в личном чате.</p>
                 </div>
               </div>
@@ -116,7 +119,7 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="email" id="email" name="email" placeholder="Ваша электронная почта" required="required" data-validation-required-message="Пожалуйста введите вашу электронную почту."/>
+                    <input class="form-control input-lg" type="email" id="email" name="email" placeholder="<?=$lang['fb6'] ?>" required="required" data-validation-required-message="<?=$lang['fb7'] ?>"/>
                   </div>
                 </div>
 
@@ -145,7 +148,7 @@
 
 
         <hr class="divider-d">
-           <?php include_once "includes/footer.html"; ?>
+           <?php include_once "includes/footer.php"; ?>
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>

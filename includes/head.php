@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--  Document Title    -->    
-    <title>FOOD AROUND</title>
+    <title><?=$lang['titleproject'] ?></title>
    <!--  <link rel="manifest" href="/manifest.json"> -->
     <!-- иконка сайта -->
     <link rel="shortcut icon" href="assets/images/favicons/icon.png" type="image/x-icon">  

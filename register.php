@@ -1,3 +1,6 @@
+<?php
+include "includes/internal-languages.php";
+?>
 <?php 
   session_start();
   if(isset($_SESSION['unique_id'])){
@@ -55,19 +58,19 @@
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.php"> Food Around </a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.php"> <?=$lang['titleproject'] ?> </a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">главная</a></li>
-              <li><a href="about.php">о нас</a></li>
+              <li><a href="index.php"><?=$lang['main'] ?></a></li>
+              <li><a href="about.php"><?=$lang['about'] ?></a></li>
               <!-- <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">информация</a> 
                 <ul class="dropdown-menu" role="menu"> -->
-                    <li><a href="general_information.php">общая информация</a></li>
+                    <li><a href="general_information.php"><?=$lang['generalinfo'] ?></a></li>
                 <!-- </ul> -->
               </li>
                 <li class="dropdown">
-                    <a href="login.php" >Авторизация</a>               
+                    <a href="login.php" ><?=$lang['authoriz'] ?></a>               
                 </li>                       
             </ul>
           </div>
@@ -82,40 +85,40 @@
         <div class="name-details">
           <div class="field input">
             <label>Введите ваше имя</label>
-            <input type="text" name="fname" placeholder="First name" required>
+            <input type="text" name="fname" placeholder="<?=$lang['fname'] ?>" required>
           </div>
           <div class="field input">
             <label>Введите вашу фамилию</label>
-            <input type="text" name="lname" placeholder="Last name" required>
+            <input type="text" name="lname" placeholder="<?=$lang['lname'] ?>" required>
           </div>
 
         </div>
         <div class="field input">
-          <label>Введите электронную почту</label>
+          <label><?=$lang['reg9'] ?></label>
           <input type="text" name="email" placeholder="Enter your email" required>
         </div>
 
         <div class="field selector" >
-          <label>Выберите свою роль</label>
+          <label><?=$lang['reg6'] ?></label>
           <select id="selectrole" name="role">
-            <option value="Consumer">Потребитель</option>
-            <option value="Culinary Specialist">Кулинарный Специалист</option>
+            <option value="Consumer"><?=$lang['reg7'] ?></option>
+            <option value="Culinary Specialist"><?=$lang['reg8'] ?></option>
           </select>
         </div>
         <div class="field input">
-          <label>Введите пароль</label>
-          <input type="password" name="password" placeholder="Enter new password" required>
+          <label><?=$lang['reg4'] ?></label>
+          <input type="password" name="password" placeholder="<?=$lang['reg4'] ?>" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
-          <label>Выберите фотографию</label>
+          <label><?=$lang['reg5'] ?></label>
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+          <input type="submit" name="submit" value="<?=$lang['reg3'] ?>">
         </div>
       </form>
-      <div class="link">Уже зарегистрировались?  <a href="login.php"><br><b>Авторизоваться сейчас</b></a></div>
+      <div class="link"><?=$lang['reg1'] ?>  <a href="login.php"><br><b><?=$lang['reg2'] ?></b></a></div>
     </section>
   </div>
 

@@ -1,3 +1,6 @@
+<?php
+include "includes/internal-languages.php";
+?>
 <?php include_once "includes/header.php"; ?>
 <body>
 <?php include_once "includes/nav.php"; ?>

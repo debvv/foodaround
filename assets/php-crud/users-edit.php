@@ -45,14 +45,18 @@ else{
 	$email = $_POST["email"];
 	$status = $_POST["status"];
 	$role = $_POST["role"];
-
+	$unique_id = $_POST['unique_id'];  //added suplimentar
     do {
-        if ( empty($fname)  || empty($lname)  || empty($email)  || empty($password)  || empty($status)  || empty($role)    ) {
+        if ( empty($fname)  || empty($lname)  || empty($email)  ||  empty($status)  || empty($role)    ) {
 			$errorMessage = "All the fields are required";
 			break;
         }
         $sql = "UPDATE users SET fname = '$fname', 
-        lname='$lname', email='$email', status='$status', role='$role' WHERE unique_id = $unique_id";
+        lname='$lname', 
+		email='$email', 
+		status='$status', 
+		role='$role' 
+		WHERE unique_id = $unique_id";
                 // UPDATE `messages` SET `incoming_msg_id`='993879515',`outgoing_msg_id`='1233085864',`msg`='Приветствую тебя!' WHERE `msg_id`=1
         $result = $conn->query($sql);
         

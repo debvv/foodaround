@@ -1,2 +1,2 @@
-# DAW - project: FoodAround
+# Teza / DAW - project: FoodAround
 

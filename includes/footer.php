@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-sm-6 col-md-8 col-lg-9">
         <div class="callout-text font-alt">
-          <h4 style="margin-top: 0px;">НАЧНИТЕ РАБОТАТЬ В ПИЩЕВОЙ ПРОМЫШЛЕННОСТИ</h4>
-            <p style="margin-bottom: 0px;">ЛИБО ЗАКАЖИТЕ БЛЮДА ОТ ЛУЧШИХ ШЕФ-ПОВАРОВ</p>
+          <h4 style="margin-top: 0px;"><?=$lang['startwork'] ?></h4>
+            <p style="margin-bottom: 0px;"><?=$lang['ororderfood'] ?></p>
         </div>
       </div>
       <div class="col-sm-6 col-md-4 col-lg-3">               

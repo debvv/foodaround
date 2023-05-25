@@ -1,0 +1,25 @@
+
+
+    .dropdown-menu {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 11px;
+        list-style: none;
+        box-sizing: border-box;
+        transition: color 0.125s ease-in-out 0s;
+        outline: 0;
+        display: block;
+        padding: 10px 15px;
+        line-height: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+        text-decoration: none;
+        background: none;
+        color: #fff;
+      }
+
+      /* not so actual */

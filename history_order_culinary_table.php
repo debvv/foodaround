@@ -1,4 +1,7 @@
 <?php
+include "includes/internal-languages.php";
+?>
+<?php
       session_start();
       include_once "assets/php/config.php";
     //   if(!isset($_SESSION['unique_id'])){
@@ -9,7 +12,7 @@
 
 <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">Orders</h2>
+              <h2 class="module-title font-alt"> <?=$lang['historyordersculinary'] ?></h2>
                 <div class="module-subtitle font-serif"></div>
           </div>
       </div>
@@ -17,16 +20,16 @@
       <table class="table table-bordered" , class="table table-striped">
         <thead>
           <tr>
-            <th>#заказа</th>
-            <th>выполнить к времени</th>
-            <th>клиент</th>
-            <th>#клиента</th>
-            <th>название блюда</th>
-            <th>описание</th>
-            <th>кол-во порций</th>
-            <th>email пользователя</th>
-            <th>адресс</th>            
-            <th>взаимодействие</th>
+            <th><?=$lang['histordcons2'] ?></th>
+            <th><?=$lang['histordcons3'] ?></th>
+            <th><?=$lang['histordcons4'] ?></th>
+            <th><?=$lang['histordcons5'] ?></th>
+            <th><?=$lang['histordcons6'] ?></th>
+            <th><?=$lang['histordcons7'] ?></th>
+            <th><?=$lang['histordcons8'] ?></th>
+            <th><?=$lang['histordcons9'] ?></th>
+            <th><?=$lang['histordcons10'] ?></th>            
+            <th><?=$lang['histordcons12'] ?></th>
           </tr>
         </thead>
         <tbody>

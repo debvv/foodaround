@@ -1,6 +1,9 @@
+<?php
+include "includes/internal-languages.php";
+?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <?php include_once "includes/head.html"; ?>
+  <?php include_once "includes/head.php"; ?>
 
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -17,7 +20,7 @@
       
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br>
 
-    <?php include_once "includes/footer.html"; ?> 
+    <?php include_once "includes/footer.php"; ?> 
     </main>
       <?php include_once "includes/scripts.html"; ?>   
       <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script>       

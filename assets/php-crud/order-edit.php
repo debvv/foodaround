@@ -57,14 +57,18 @@ else{
     $email = $_POST["email"];
     $address = $_POST["address"];
     $accepted = $_POST["accepted"];
-
+	$id_order = $_POST['id_order']; //fix error with sintax $sql down
     do {
         if ( empty($time_data)  || empty($name)  || empty($from_id)  || empty($product)  || empty($description)  || empty($count)  || empty($email)  || empty($address)   || empty($accepted)    ) {
 			$errorMessage = "All the fields are required";
 			break;
         }
-        $sql = "UPDATE orders SET time_date = '$time_date', 
-        name='$name', from_id='$from_id', product='$product', description='$description', count='$count', email='$email', address='$address', accepted='$accepted' WHERE id_order = $id_order";
+        $sql = "UPDATE orders SET time_date = '$time_data', 
+        name='$name', from_id='$from_id', 
+		product='$product', description='$description', 
+		count='$count', email='$email', 
+		address='$address', 
+		accepted='$accepted' WHERE id_order = $id_order";
                
         $result = $conn->query($sql);
         
@@ -110,7 +114,7 @@ else{
 			<div class="row mb-3">
 				<label class="col-sm-3 col-form-label">Time Date</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" name="time_date" value="<?php echo $time_date; ?>">
+					<input type="text" class="form-control" name="time_date" value="<?php echo $time_data; ?>">
 				</div>			
 			</div>
 
