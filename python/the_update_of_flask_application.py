@@ -4,7 +4,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import User, Order
+from python.models import User, Order
 
 app = Flask(__name__)
 
