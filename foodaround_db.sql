@@ -1,37 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Янв 16 2023 г., 19:50
--- Версия сервера: 10.4.24-MariaDB
--- Версия PHP: 8.1.6
+-- Время создания: Мар 08 2025 г., 22:57
+-- Версия сервера: 10.4.32-MariaDB
+-- Версия PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-
--- Таблица для отзывов о кулинарах
-CREATE TABLE chef_reviews (
-    id SERIAL PRIMARY KEY,
-    chef_name VARCHAR(255) NOT NULL,
-    rating FLOAT NOT NULL,
-    comment TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Таблица для отзывов из скрапинга/датасетов
-CREATE TABLE scraped_reviews (
-    id SERIAL PRIMARY KEY,
-    restaurant_name VARCHAR(255) NOT NULL,
-    source VARCHAR(255), -- Например, "TripAdvisor", "Google Reviews"
-    rating FLOAT,
-    review_text TEXT,
-    review_date TIMESTAMP,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -39,8 +18,23 @@ CREATE TABLE scraped_reviews (
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `chatapp`
+-- База данных: `foodaround_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `chef_reviews`
+--
+
+CREATE TABLE `chef_reviews` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `chef_name` varchar(255) NOT NULL,
+  `rating` float NOT NULL,
+  `comment` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -54,7 +48,7 @@ CREATE TABLE `feedback` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `msg` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `feedback`
@@ -78,7 +72,7 @@ CREATE TABLE `messages` (
   `incoming_msg_id` int(255) NOT NULL,
   `outgoing_msg_id` int(255) NOT NULL,
   `msg` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `messages`
@@ -149,23 +143,68 @@ CREATE TABLE `orders` (
   `description` varchar(255) NOT NULL,
   `count` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,  
-  `accepted` int(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `address` varchar(255) NOT NULL,
+  `accepted` int(255) DEFAULT NULL,
+  `restaurant_id` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `orders`
 --
 
-INSERT INTO `orders` (`id_order`, `time_date`, `name`, `from_id`, `product`, `description`, `count`, `email`, `address`, `accepted`) VALUES
-(3, '2022-11-30 15:03:00', 'Tester', 1527932594, 'пирожочки', 'с мясом', 6, 'zozo@yahoo.com', 'Decebal 6-3', 1525781292),
-(4, '2022-11-30 17:03:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 0),
-(5, '2022-11-30 19:03:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
-(6, '2022-11-26 12:44:00', 'Artur', 1527932594, 'пирожочки', 'с мясом', 45, 'eugeniu.casian@iis.utm.md', 'decebal street', 0),
-(7, '2023-01-06 08:15:00', 'алекс', 767869359, 'лазанья', 'классическая лазания', 1, 'alex@mail.ru', 'chisinau bd. moscova 21', 1527932594),
-(9, '2023-01-11 08:00:00', 'alex', 767869359, 'котлетки', 'из свиноговяжего фарша', 2, 'alex@mail.ru', 'burebista 12', 0),
-(10, '2023-01-13 15:00:00', 'alex', 767869359, 'пирожки', 'с кортошкой', 5, 'alex@mail.ru', 'burebista 12', 1525781292),
-(11, '2023-01-19 15:32:00', 'admin', 1527932594, 'пирожочки', 'с мясом', 6, 'jenea983@mail.ru', 'decebal street', 0);
+INSERT INTO `orders` (`id_order`, `time_date`, `name`, `from_id`, `product`, `description`, `count`, `email`, `address`, `accepted`, `restaurant_id`) VALUES
+(3, '2022-11-30 15:03:00', 'Tester', 1527932594, 'пирожочки', 'с мясом', 6, 'zozo@yahoo.com', 'Decebal 6-3', 1525781292, 0),
+(4, '2022-11-30 17:03:00', 'Vladislav', 1527932594, 'яблоки', ' ( в кг )', 6, 'Vladik@mail.ru', 'sarmizegetusa street', 0, 0),
+(5, '2022-11-30 19:03:00', 'evgen', 1527932594, 'пирожочки', 'с мясом', 4, 'eugeniu.casian@iis.utm.md', 'decebal street', 0, 0),
+(6, '2022-11-26 12:44:00', 'Artur', 1527932594, 'пирожочки', 'с мясом', 45, 'eugeniu.casian@iis.utm.md', 'decebal street', 0, 0),
+(7, '2023-01-06 08:15:00', 'алекс', 767869359, 'лазанья', 'классическая лазания', 1, 'alex@mail.ru', 'chisinau bd. moscova 21', 1527932594, 0),
+(9, '2023-01-11 08:00:00', 'alex', 767869359, 'котлетки', 'из свиноговяжего фарша', 2, 'alex@mail.ru', 'burebista 12', 0, 0),
+(10, '2023-01-13 15:00:00', 'alex', 767869359, 'пирожки', 'с кортошкой', 5, 'alex@mail.ru', 'burebista 12', 1525781292, 0),
+(11, '2023-01-19 15:32:00', 'admin', 1527932594, 'пирожочки', 'с мясом', 6, 'jenea983@mail.ru', 'decebal street', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `restaurants`
+--
+
+CREATE TABLE `restaurants` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` text DEFAULT NULL,
+  `rating` float DEFAULT NULL,
+  `cuisine` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`cuisine`)),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `restaurant_cuisines`
+--
+
+CREATE TABLE `restaurant_cuisines` (
+  `id` bigint(20) NOT NULL,
+  `restaurant_id` bigint(20) NOT NULL,
+  `cuisine` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `scraped_reviews`
+--
+
+CREATE TABLE `scraped_reviews` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `restaurant_name` varchar(255) NOT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `rating` float DEFAULT NULL,
+  `review_text` text DEFAULT NULL,
+  `review_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `restaurant_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -178,17 +217,17 @@ CREATE TABLE `users` (
   `fname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `password_hash` varchar(255) DEFAULT NULL,
   `img` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`, `role`) VALUES
+INSERT INTO `users` (`unique_id`, `fname`, `lname`, `email`, `password_hash`, `img`, `status`, `role`) VALUES
 (148469212, 'Vlad', 'Vladick', 'vlad@mail.ru', 'd701fde59d74f76803087b6632186caf', '1664951991Screenshot_1.png', 'Offline now', 'Consumer'),
 (307478949, 'Tester', 'Testik', 'roottest@mail.ru', '9d734a505cb2f6ff0b4823bc76a0d52e', '1667835290AgWyCZmybdE.jpg', 'Offline now', 'Consumer'),
 (328251286, 'Shef Povar', 'ANATOLIO BELUCCI', 'shef@utm.md', '838990b2e11478c42babe6dd355473da', '1664800819subwoolfer-wearing-masks-mgp-768x449.jpg.jpeg', 'Offline now', 'Culinary Specialist'),
@@ -207,6 +246,13 @@ INSERT INTO `users` (`unique_id`, `fname`, `lname`, `email`, `password`, `img`, 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `chef_reviews`
+--
+ALTER TABLE `chef_reviews`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Индексы таблицы `feedback`
@@ -231,6 +277,25 @@ ALTER TABLE `orders`
   ADD KEY `from_id` (`from_id`);
 
 --
+-- Индексы таблицы `restaurants`
+--
+ALTER TABLE `restaurants`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `restaurant_cuisines`
+--
+ALTER TABLE `restaurant_cuisines`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `restaurant_id` (`restaurant_id`);
+
+--
+-- Индексы таблицы `scraped_reviews`
+--
+ALTER TABLE `scraped_reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -239,6 +304,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `chef_reviews`
+--
+ALTER TABLE `chef_reviews`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `feedback`
@@ -259,8 +330,32 @@ ALTER TABLE `orders`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT для таблицы `restaurants`
+--
+ALTER TABLE `restaurants`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `restaurant_cuisines`
+--
+ALTER TABLE `restaurant_cuisines`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `scraped_reviews`
+--
+ALTER TABLE `scraped_reviews`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `chef_reviews`
+--
+ALTER TABLE `chef_reviews`
+  ADD CONSTRAINT `chef_reviews_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`unique_id`) ON DELETE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `feedback`
@@ -274,6 +369,12 @@ ALTER TABLE `feedback`
 ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`incoming_msg_id`) REFERENCES `users` (`unique_id`),
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`outgoing_msg_id`) REFERENCES `users` (`unique_id`);
+
+--
+-- Ограничения внешнего ключа таблицы `restaurant_cuisines`
+--
+ALTER TABLE `restaurant_cuisines`
+  ADD CONSTRAINT `restaurant_cuisines_ibfk_1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
