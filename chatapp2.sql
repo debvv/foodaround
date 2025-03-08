@@ -17,3 +17,6 @@ CREATE TABLE scraped_reviews (
     review_date TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+-- ?  ALTER TABLE feedback ADD COLUMN additional_info TEXT; -- Если хотим расширить `feedback`
