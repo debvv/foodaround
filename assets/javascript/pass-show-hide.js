@@ -1,4 +1,6 @@
-const pswrdField = document.querySelector(".form input[type='password']"), // querySelector() Document метод querySelector() возвращает первый элемент ( Element ) документа, который соответствует указанному селектору или группе селекторов. 
+const pswrdField = document.querySelector(".form input[type='password']"), 
+// querySelector() Document метод querySelector() возвращает первый элемент ( Element ) документа,
+//  который соответствует указанному селектору или группе селекторов. 
 toggleIcon = document.querySelector(".form .field i");
 
 toggleIcon.onclick = () =>{ // Свойство onclick возвращает обработчик события click на текущем элементе.
