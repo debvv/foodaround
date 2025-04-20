@@ -37,7 +37,7 @@
                                 $status = "Active now"; // при авторизации помечается как активный статус юзера на сайте
                                 $encrypt_pass = md5($password);
                                 //insert user data in db(users)
-                                $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status, role)
+                                $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password_hash, img, status, role)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}' , '{$role}')");
                                 if($insert_query){
                                     $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
