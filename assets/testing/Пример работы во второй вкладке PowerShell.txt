@@ -1,0 +1,30 @@
+# GET /get_restaurants
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/get_restaurants"
+
+# POST /predict_demand
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:5000/predict_demand" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"restaurant_id":1,"hour":12,"day_of_week":2,"is_weekend":0}'
+
+# POST /recommend
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:5000/recommend" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"user_id":42}'
+
+# POST /analyze_reviews
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:5000/analyze_reviews" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"review_text":"Еда была отличная, но доставка опоздала."}'
+
+# POST /analyze_topics
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:5000/analyze_topics" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"review_text":"Очень понравился вкус и оформление блюда."}'
