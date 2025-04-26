@@ -38,7 +38,7 @@
 						<td>$row[fname]</td>
 						<td>$row[lname]</td>
 						<td>$row[email]</td>
-						<td>$row[password]</td>
+						<td>$row[password_hash]</td>
 						<td>$row[status]</td>
 						<td>$row[role]</td>
 						<td>
