@@ -15,7 +15,9 @@ cd D:\!@!_UTM_MASTERAT_PROJECT\foodaround_py
 Заполните таблицу chef_reviews тестовыми записями.
 2.3. Orders
 Убедитесь, что в orders есть несколько пользователей (в from_id) и разных restaurant_id. Если нужно, запустите seed_orders.py ещё раз или вручную вставьте несколько записей.
-
+3. Написать автотесты
+3.1. Unit-тесты для каждого эндпоинта (pytest + requests или FlaskClient).
+3.2. Интеграционные тесты, которые поднимут тестовую БД (SQLite) и прогонят все эндпоинты последовательно.
 
 # 1) Прогноз спроса
     invoke-restmethod -uri "http://127.0.0.1:5000/predict_demand" `
