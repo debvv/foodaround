@@ -1,76 +1,9 @@
 <?php
 include "includes/internal-languages.php";
 ?>
-<?php session_start(); 
-   $uid = $_SESSION['unique_id'] ?? 0;
-?>
-<button id="get-recommendations">Получить рекомендации</button>
-
-<h3>По коллаборативной фильтрации:</h3>
-<ul id="cf-list"></ul>
-
-<h3>По содержанию (CB):</h3>
-<ul id="cb-list"></ul>
-
-<script>
-const API = 'http://localhost:5000';
-document.getElementById('get-recommendations')
-  .addEventListener('click', ()=>{
-    fetch(`${API}/recommend`, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ user_id: <?=json_encode($uid)?> })
-    })
-    .then(r=>r.json())
-    .then(data=>{
-      document.getElementById('cf-list').innerHTML =
-        data.cf_recommendations.map(n=>`<li>${n}</li>`).join('');
-      document.getElementById('cb-list').innerHTML =
-        data.cb_recommendations.map(n=>`<li>${n}</li>`).join('');
-    })
-    .catch(console.error);
-});
-</script>
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <?php include_once "includes/head.php"; ?>
-  <script>
-// Базовый URL вашего ML-сервиса
-const API = 'http://localhost:5000';
-
-// Функция для прогноза спроса
-function updateDemand() {
-  const sel = document.getElementById('restaurant-select');
-  const restaurant_id = +sel.value;
-  // тут можно взять час/день из JS или из PHP
-  const now = new Date();
-  const hour = now.getHours();
-  const day = now.getDay();            // 0=Воскресенье, …, 6=Суббота
-  const is_weekend = (day===0||day===6) ? 1 : 0;
-
-  fetch(`${API}/predict_demand`, {
-    method: 'POST',
-    headers: { 'Content-Type':'application/json' },
-    body: JSON.stringify({ restaurant_id, hour, day_of_week: day, is_weekend })
-  })
-  .then(r=>r.json())
-  .then(data=>{
-    // просто пример, куда лепить результат
-    document.getElementById('demand-output').textContent =
-      'Ожидаемый объём заказов: ' + data.prediction.toFixed(2);
-  })
-  .catch(console.error);
-}
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  const sel = document.getElementById('restaurant-select');
-  if (!sel) return;
-  sel.addEventListener('change', updateDemand);
-  updateDemand();
-});
-</script>
-
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
 
@@ -207,21 +140,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           </div>
         </section>
 
-        <label for="restaurant-select">Ресторан:</label>
-<select id="restaurant-select" name="restaurant_id">
-  <?php
-    // пример: заполняли из БД
-    $db = new mysqli(...);
-    $res = $db->query("SELECT id,name FROM restaurants");
-    while($row = $res->fetch_assoc()){
-      echo "<option value=\"{$row['id']}\">{$row['name']}</option>";
-    }
-  ?>
-</select>
 
-<div id="demand-output" style="margin-top: .5em; font-weight:bold;">
-  Загрузка прогноза…
-</div>
      <!--    <section id="map-section">
           <div id="map"></div>
         </section> -->
