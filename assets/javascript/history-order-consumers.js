@@ -4,7 +4,8 @@ $(document).ready(function() {
             url: "././history_order_consumers_table.php",
             type: "GET",                    
             dataType: "html",
-            success: function(data) { //если запрос успешен
+            success: function(data) {
+                //если запрос успешен
                 // Получаем ответ с сервера с помощью ajax
                 // console.log(data);
                 // console.log(data.responseText);

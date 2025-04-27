@@ -16,6 +16,7 @@ body{
   background: #f7f7f7;
   padding: 0 10px;
 }
+
 .wrapper{
   background: #fff;
   max-width: 450px;
@@ -25,10 +26,13 @@ body{
               0 32px 64px -48px rgba(0,0,0,0.5);
 }
 
+
 /* Login & Signup Form CSS Start */
 .form{
   padding: 25px 30px;
 }
+
+
 .form header{
   font-size: 25px;
   font-weight: 600;
@@ -42,9 +46,13 @@ body{
 
 
 }
+
+
 .form form{
   margin: 20px 0;
 }
+
+
 .form form .error-text{
   color: #721c24;
   padding: 8px 10px;
@@ -55,24 +63,30 @@ body{
   margin-bottom: 10px;
   display: none;
 }
+
 .form form .name-details{
   display: flex;
 }
+
 .form .name-details .field:first-child{
   margin-right: 10px;
 }
+
 .form .name-details .field:last-child{
   margin-left: 10px;
 }
+
 .form form .field{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
   position: relative;
 }
+
 .form form .field label{
   margin-bottom: 2px;
 }
+
 .form form .input input{
   height: 40px;
   width: 100%;
@@ -81,12 +95,15 @@ body{
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 .form form .field input{
   outline: none;
 }
+
 .form form .image input{
   font-size: 17px;
 }
+
 .form form .button input{
   height: 45px;
   border: none;
@@ -97,6 +114,7 @@ body{
   cursor: pointer;
   margin-top: 13px;
 }
+
 .form form .field i{
   position: absolute;
   right: 15px;
@@ -105,27 +123,33 @@ body{
   cursor: pointer;
   transform: translateY(-50%);
 }
+
 .form form .field i.active::before{
   color: #333;
   content: "\f070";
 }
+
 .form .link{
   text-align: center;
   margin: 10px 0;
   font-size: 17px;
 }
+
 .form .link a{
   color: #333;
 }
+
 .form .link a:hover{
   text-decoration: underline;
 }
 
 
 /* Users List CSS Start */
+
 .users{
   padding: 25px 30px;
 }
+
 .users header,
 .users-list a{
   display: flex;
@@ -134,26 +158,32 @@ body{
   border-bottom: 1px solid #e6e6e6;
   justify-content: space-between;
 }
+
 .wrapper img{
   object-fit: cover;
   border-radius: 50%;
 }
+
 .users header img{
   height: 50px;
   width: 50px;
 }
+
 :is(.users, .users-list) .content{
   display: flex;
   align-items: center;
 }
+
 :is(.users, .users-list) .content .details{
   color: #000;
   margin-left: 20px;
 }
+
 :is(.users, .users-list) .details span{
   font-size: 18px;
   font-weight: 500;
 }
+
 .users header .logout{
   display: block;
   background: #333;
@@ -165,6 +195,7 @@ body{
   border-radius: 5px;
   font-size: 17px;
 }
+
 .users .search{
   margin: 20px 0;
   display: flex;
@@ -172,9 +203,11 @@ body{
   align-items: center;
   justify-content: space-between;
 }
+
 .users .search .text{
   font-size: 18px;
 }
+
 .users .search input{
   position: absolute;
   height: 42px;
@@ -188,10 +221,12 @@ body{
   pointer-events: none;
   transition: all 0.2s ease;
 }
+
 .users .search input.show{
   opacity: 1;
   pointer-events: auto;
 }
+
 .users .search button{
   position: relative;
   z-index: 1;
@@ -206,34 +241,42 @@ body{
   border-radius: 0 5px 5px 0;
   transition: all 0.2s ease;
 }
+
 .users .search button.active{
   background: #333;
   color: #fff;
 }
+
 .search button.active i::before{
   content: '\f00d';
 }
+
 .users-list{
   max-height: 350px;
   overflow-y: auto;
 }
+
 :is(.users-list, .chat-box)::-webkit-scrollbar{
   width: 0px;
 }
+
 .users-list a{
   padding-bottom: 10px;
   margin-bottom: 15px;
   padding-right: 15px;
   border-bottom-color: #f1f1f1;
 }
+
 .users-list a:last-child{
   margin-bottom: 0px;
   border-bottom: none;
 }
+
 .users-list a img{
   height: 40px;
   width: 40px;
 }
+
 .users-list a .details p{
   color: #67676a;
 }
@@ -242,29 +285,35 @@ body{
   color: #468669;
   padding-left: 10px;
 }
+
 .users-list a .status-dot.offline{
   color: #ccc;
 }
 
 /* Chat Area CSS Start */
+
 .chat-area header{
   display: flex;
   align-items: center;
   padding: 18px 30px;
 }
+
 .chat-area header .back-icon{
   color: #333;
   font-size: 18px;
 }
+
 .chat-area header img{
   height: 45px;
   width: 45px;
   margin: 0 15px;
 }
+
 .chat-area header .details span{
   font-size: 17px;
   font-weight: 500;
 }
+
 .chat-box{
   position: relative;
   min-height: 500px;
@@ -275,6 +324,7 @@ body{
   box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
               inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
 }
+
 .chat-box .text{
   position: absolute;
   top: 45%;
@@ -283,50 +333,61 @@ body{
   text-align: center;
   transform: translate(-50%, -50%);
 }
+
 .chat-box .chat{
   margin: 15px 0;
 }
+
 .chat-box .chat p{
   word-wrap: break-word;
   padding: 8px 16px;
   box-shadow: 0 0 32px rgb(0 0 0 / 8%),
               0rem 16px 16px -16px rgb(0 0 0 / 10%);
 }
+
 .chat-box .outgoing{
   display: flex;
 }
+
 .chat-box .outgoing .details{
   margin-left: auto;
   max-width: calc(100% - 130px);
 }
+
 .outgoing .details p{
   background: #333;
   color: #fff;
   border-radius: 18px 18px 0 18px;
 }
+
 .chat-box .incoming{
   display: flex;
   align-items: flex-end;
 }
+
 .chat-box .incoming img{
   height: 35px;
   width: 35px;
 }
+
 .chat-box .incoming .details{
   margin-right: auto;
   margin-left: 10px;
   max-width: calc(100% - 130px);
 }
+
 .incoming .details p{
   background: #fff;
   color: #333;
   border-radius: 18px 18px 18px 0;
 }
+
 .typing-area{
   padding: 18px 30px;
   display: flex;
   justify-content: space-between;
 }
+
 .typing-area input{
   height: 45px;
   width: calc(100% - 58px);
@@ -336,6 +397,7 @@ body{
   outline: none;
   border-radius: 5px 0 0 5px;
 }
+
 .typing-area button{
   color: #fff;
   width: 55px;
@@ -349,12 +411,14 @@ body{
   border-radius: 0 5px 5px 0;
   transition: all 0.3s ease;
 }
+
 .typing-area button.active{
   opacity: 1;
   pointer-events: auto;
 }
 
 /* Responive media query */
+
 @media screen and (max-width: 450px) {
   .form, .users{
     padding: 20px;
@@ -466,7 +530,9 @@ html {
     left: auto !important;
   }
   
+
   /* Transition elsements */
+
   a,
   .btn {
     transition: all 0.125s ease-in-out 0s;
@@ -489,6 +555,7 @@ html {
   }
   
   /* Reset box-shadow */
+
   .btn,
   .well,
   .panel,
@@ -501,6 +568,7 @@ html {
   }
   
   /* Reset border-radius */
+
   .well,
   .label,
   .alert,
@@ -576,6 +644,7 @@ html {
   }
   
   /* Sections */
+
   .navbar-custom + .main {
     margin-top: 50px;
   }
@@ -596,6 +665,7 @@ html {
   }
   
   /* Module header */
+
   .module-small {
     padding: 70px 0;
   }
@@ -627,6 +697,7 @@ html {
   }
   
   /* Sections dividers */
+
   .divider-w {
     border-top: 1px solid #eaeaea;
     margin: 0;
@@ -638,6 +709,7 @@ html {
   }
   
   /* Half-image */
+
   .side-image {
     position: absolute;
     height: 100%;
@@ -654,6 +726,7 @@ html {
   }
   
   /* Dark background */
+
   .bg-dark,
   .bg-dark-30,
   .bg-dark-60,
@@ -736,6 +809,7 @@ html {
   }
   
   /* Vertical margin, padding */
+  
   .p-0 {
     padding: 0 !important;
   }

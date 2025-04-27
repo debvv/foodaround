@@ -13,9 +13,11 @@ form.onsubmit = (e)=>{
   }
 
 
-continueBtn.onclick = ()=>{ // Событие onclick происходит, когда пользователь нажимает на элемент.
+continueBtn.onclick = ()=>{ 
+    // Событие onclick происходит, когда пользователь нажимает на элемент.
     //ajax
-    let xhr = new XMLHttpRequest(); // XMLHttpRequest — API, доступный в скриптовых языках браузеров, 
+    let xhr = new XMLHttpRequest(); 
+    // XMLHttpRequest — API, доступный в скриптовых языках браузеров, 
     // таких как JavaScript. Использует запросы HTTP или HTTPS напрямую к веб-серверу и загружает данные ответа
     //  сервера напрямую в вызывающий скрипт.
     //создается xml object
@@ -29,7 +31,8 @@ continueBtn.onclick = ()=>{ // Событие onclick происходит, ко
       // включая содержание, изображения, стилевые файлы и внешние скрипты.
       if(xhr.readyState === XMLHttpRequest.DONE){
           if(xhr.status === 200){
-              let data = xhr.response; //xhr.response дает нам ответ на этот переданный url адрес
+              let data = xhr.response; 
+              //xhr.response дает нам ответ на этот переданный url адрес
               if(data === "success"){
                 location.href="index.php";
               }else{
@@ -43,7 +46,8 @@ continueBtn.onclick = ()=>{ // Событие onclick происходит, ко
     let formData = new FormData(form); 
     // FormData — это специальная коллекция данных, которая позволяет передавать данные в виде пар [ключ, значение] 
     // на сервер при помощи fetch() или XMLHttpRequest .
-    xhr.send(formData); // метод send() объекта XMLHttpRequest позволяет отправить запрос на сервер. 
+    xhr.send(formData); 
+    // метод send() объекта XMLHttpRequest позволяет отправить запрос на сервер. 
     //creating new FormData object, sending the form data to php
 }
 

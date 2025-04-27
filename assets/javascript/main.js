@@ -2,7 +2,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
 /* ---------------------------------------------- /*
  * Preloader
- /* ---------------------------------------------- */
+/* ---------------------------------------------- */
 (function(){
     $(window).on('load', function() {
         $('.loader').fadeOut();
@@ -13,7 +13,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         wow = new WOW({
             mobile: false
@@ -23,7 +23,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Scroll top
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
@@ -41,7 +41,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Initialization General Scripts for all pages
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         var homeSection = $('.home-section'),
             navbar      = $('.navbar-custom'),
@@ -72,7 +72,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Set sections backgrounds
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         var module = $('.home-section, .module, .module-small, .side-image');
         module.each(function(i) {
@@ -83,7 +83,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Home section height
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         function buildHomeSection(homeSection) {
             if (homeSection.length > 0) {
@@ -98,7 +98,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Home section effects
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         function effectsHomeSection(homeSection, scrollTopp) {
             if (homeSection.length > 0) {
@@ -116,7 +116,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Intro slider setup
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         if( $('.hero-slider').length > 0 ) {
             $('.hero-slider').flexslider( {
@@ -140,7 +140,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Rotate
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $(".rotate").textrotator({
             animation: "dissolve",
@@ -151,7 +151,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Transparent navbar animation
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         function navbarAnimation(navbar, homeSection, navHeight) {
             var topScroll = $(window).scrollTop();
@@ -166,7 +166,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Navbar submenu
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         function navbarSubmenu(width) {
             if (width > 767) {
@@ -192,7 +192,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Navbar hover dropdown on desctop
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         function hoverDropdown(width, mobileTest) {
             if ((width > 767) && (mobileTest !== true)) {
@@ -225,7 +225,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Navbar collapse on click
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $(document).on('click','.navbar-collapse.in',function(e) {
             if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
@@ -236,7 +236,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Video popup, Gallery
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.video-pop-up').magnificPopup({
             type: 'iframe'
@@ -259,7 +259,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Portfolio
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         var worksgrid   = $('#works-grid'),
             worksgrid_mode;
@@ -297,7 +297,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Testimonials
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         if ($('.testimonials-slider').length > 0 ) {
             $('.testimonials-slider').flexslider( {
@@ -309,7 +309,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Post Slider
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         if ($('.post-images-slider').length > 0 ) {
             $('.post-images-slider').flexslider( {
@@ -321,7 +321,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Progress bar animations
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.progress-bar').each(function(i) {
             $(this).appear(function() {
@@ -335,7 +335,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Funfact Count-up
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.count-item').each(function(i) {
             $(this).appear(function() {
@@ -347,7 +347,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Youtube video background
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $(function(){
             $(".video-player").mb_YTPlayer();
@@ -378,7 +378,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Owl Carousel
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.owl-carousel').each(function(i) {
 
@@ -420,7 +420,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Blog masonry
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.post-masonry').imagesLoaded(function() {
             $('.post-masonry').masonry();
@@ -429,7 +429,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Scroll Animation
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('.section-scroll').bind('click', function(e) {
             var anchor = $(this);
@@ -441,7 +441,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /*===============================================================
          Working Contact Form
-         ================================================================*/
+        ================================================================*/
 
         $("#contactForm").submit(function (e) {
 
@@ -481,7 +481,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /*===============================================================
          Working Request A Call Form
-         ================================================================*/
+        ================================================================*/
 
         $("#requestACall").submit(function (e) {
 
@@ -521,7 +521,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /*===============================================================
          Working Reservation Form
-         ================================================================*/
+        ================================================================*/
 
         $("#reservationForm").submit(function (e) {
 
@@ -562,7 +562,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Subscribe form ajax
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         $('#subscription-form').submit(function(e) {
 
@@ -599,7 +599,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
         /* ---------------------------------------------- /*
          * Google Map
-         /* ---------------------------------------------- */
+        /* ---------------------------------------------- */
 
         if($("#map").length == 0 || typeof google == 'undefined') return;
 

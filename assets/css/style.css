@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   display: flex;
   align-items: center;
@@ -14,6 +15,7 @@ body{
   background: #f7f7f7;
   padding: 0 10px;
 }
+
 .wrapper{
   background: #fff;
   max-width: 450px;
@@ -24,18 +26,22 @@ body{
 }
 
 /* Login & Signup Form CSS Start */
+
 .form{
   padding: 25px 30px;
 }
+
 .form header{
   font-size: 25px;
   font-weight: 600;
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
 }
+
 .form form{
   margin: 20px 0;
 }
+
 .form form .error-text{
   color: #721c24;
   padding: 8px 10px;
@@ -46,24 +52,30 @@ body{
   margin-bottom: 10px;
   display: none;
 }
+
 .form form .name-details{
   display: flex;
 }
+
 .form .name-details .field:first-child{
   margin-right: 10px;
 }
+
 .form .name-details .field:last-child{
   margin-left: 10px;
 }
+
 .form form .field{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
   position: relative;
 }
+
 .form form .field label{
   margin-bottom: 2px;
 }
+
 .form form .input input{
   height: 40px;
   width: 100%;
@@ -72,12 +84,15 @@ body{
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 .form form .field input{
   outline: none;
 }
+
 .form form .image input{
   font-size: 17px;
 }
+
 .form form .button input{
   height: 45px;
   border: none;
@@ -88,6 +103,7 @@ body{
   cursor: pointer;
   margin-top: 13px;
 }
+
 .form form .field i{
   position: absolute;
   right: 15px;
@@ -96,24 +112,30 @@ body{
   cursor: pointer;
   transform: translateY(-50%);
 }
+
 .form form .field i.active::before{
   color: #333;
   content: "\f070";
 }
+
 .form .link{
   text-align: center;
   margin: 10px 0;
   font-size: 17px;
 }
+
 .form .link a{
   color: #333;
 }
+
 .form .link a:hover{
   text-decoration: underline;
 }
 
 
 /* Users List CSS Start */
+
+
 .users{
   padding: 25px 30px;
 }
@@ -238,6 +260,7 @@ body{
 }
 
 /* Chat Area CSS Start */
+
 .chat-area header{
   display: flex;
   align-items: center;
@@ -346,6 +369,7 @@ body{
 }
 
 /* Responive media query */
+
 @media screen and (max-width: 450px) {
   .form, .users{
     padding: 20px;

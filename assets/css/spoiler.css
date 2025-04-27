@@ -21,6 +21,7 @@ button{
   transition: .4s ease;
   border-radius: 25px;
 }
+
 button:hover{ 
   transform: scale(1.1);
 }
