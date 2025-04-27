@@ -7,7 +7,14 @@ cd D:\!@!_UTM_MASTERAT_PROJECT\foodaround_py
 # Активация venv312
 .\venv312\Scripts\Activate.ps1
 
-
+# to do: 
+2. Наполнить базу данными
+2.1. Scraped Reviews
+Сгенерируйте и вставьте (через SQL-файл или скрипт) хотя бы 50–100 строк в scraped_reviews, чтобы проверить, как /analyze_topics и /analyze_reviews работают на реальных данных.
+2.2. Chef Reviews
+Заполните таблицу chef_reviews тестовыми записями.
+2.3. Orders
+Убедитесь, что в orders есть несколько пользователей (в from_id) и разных restaurant_id. Если нужно, запустите seed_orders.py ещё раз или вручную вставьте несколько записей.
 
 
 # 1) Прогноз спроса
