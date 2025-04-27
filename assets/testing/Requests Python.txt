@@ -1,3 +1,14 @@
+# Если политика выполнения запрещает скрипты — разрешить для сессии:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+# Перейти в папку проекта
+cd D:\!@!_UTM_MASTERAT_PROJECT\foodaround_py
+
+# Активация venv312
+.\venv312\Scripts\Activate.ps1
+
+
+
 
 # 1) Прогноз спроса
     invoke-restmethod -uri "http://127.0.0.1:5000/predict_demand" `
