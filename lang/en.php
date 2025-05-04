@@ -133,7 +133,7 @@ $lang['slidedown2']='slideDown';
 $lang['slidetoggle']='Toggle slide-up and slide-down states for the target';
 $lang['slidetoggletwo']='slideToggle';
 
-
+$lang['miradiprivetstovatvas']='We are glad to welcome you to the order page. As soon as all the fields are filled in correctly, the application will be sent to our chefs, who will be able to accept it and discuss all the details with you personally in a personal chat.';
 $lang['ps'] ='USER AGREEMENT';
 $lang['1'] ='General Provisions';
 $lang['11'] =            '1.1 This User Agreement (the <Agreement>) is an agreement between you, as a user of the Web Application (the <User>) and the owner of the Web Application (the <Owner>).';

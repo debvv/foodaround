@@ -133,7 +133,7 @@ $lang ['slidedown'] = 'doar glisează în jos elementul țintă';
 $lang ['slidedown2']= 'slideDown';
 $lang ['slidetoggle']= 'comută stările slide-up și slide-down pentru țintă';
 $lang ['slidetoggletwo']= 'Slide Toggle';
-
+$lang['miradiprivetstovatvas']='Suntem încântați să vă urăm bun venit pe pagina de finalizare a comenzii. După completarea corectă a tuturor câmpurilor, aplicația va fi trimisă bucătarilor noștri, care o vor putea accepta și vor discuta toate detaliile cu dumneavoastră personal într-un chat privat.';
 $lang['ps'] ="ACORDUL UTILIZATORULUI";
 $lang['1'] ="Dispoziții generale";
 $lang['11'] =            '1.1. Prezentul Acord de utilizare (denumit în continuare <Acordul>) este un acord între dumneavoastră, în calitate de utilizator al Aplicației Web (denumit în continuare <Utilizatorul>) și proprietarul Aplicației Web (denumit în continuare <Proprietarul>).';

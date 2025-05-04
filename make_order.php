@@ -49,11 +49,38 @@ include "includes/internal-languages.php";
         });
       }
 ///////////
+ // 3) Подгрузить рекомендации (CF + CB)
+ function loadRecs() {
+      <?php if($user_id): ?>
+      $.ajax({
+        url: `${API}/recommend`,
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ user_id: <?=$user_id?> })
+      }).done(resp => {
+        $('#cf_recommendations').empty();
+        resp.cf_recommendations.forEach(n =>
+          $('#cf_recommendations').append(`<li>${n}</li>`)
+        );
+        $('#cb_recommendations').empty();
+        resp.cb_recommendations.forEach(n =>
+          $('#cb_recommendations').append(`<li>${n}</li>`)
+        );
+      });
+      <?php endif; ?>
+    }
 
+    $(function(){
+      loadRestaurants();
+      loadRecs();
+      // Событие изменения для прогноза спроса
+      $('#restaurant_id, #date, #time').on('change', updateDemand);
+    });
+ 
 
     // Вариант 1: через $.ajax
-  $(document).on("click", "#getRest", function() {
-    console.log('CLICK BLYAT')
+ // $(document).on("click", "#getRest", function() {
+ //   console.log('CLICK BLYAT')
     
     // $.ajax({
     //   url: 'http://127.0.0.1:5000/get_restaurants',    // адрес вашего эндпоинта
@@ -68,27 +95,27 @@ include "includes/internal-languages.php";
     // });
 
 
-    $.ajax({
+ //   $.ajax({
       // headers: { 
       //   'Accept': 'application/json',
       //   'Content-Type': 'application/json' 
       // },
-      url: 'http://127.0.0.1:5000/recommend',    // адрес вашего эндпоинта
-      type: 'POST',
-      data: {
-        user_id : 1527932594
-      },
-      dataType: 'text',        // ожидаемый формат ответа (может быть 'html', 'text' и т.д.)
-      success: function(response) {
-        console.log(response)
-        $("#restList").html(response)
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        console.error('Ошибка:', textStatus, errorThrown);
-      }
-    });
-    return false;
-  });
+ //     url: 'http://127.0.0.1:5000/recommend',    // адрес вашего эндпоинта
+  //    type: 'POST',
+  //    data: {
+  //      user_id : 1527932594
+  //    },
+  //    dataType: 'text',        // ожидаемый формат ответа (может быть 'html', 'text' и т.д.)
+  //    success: function(response) {
+  //      console.log(response)
+  //      $("#restList").html(response)
+   //   },
+   //   error: function(jqXHR, textStatus, errorThrown) {
+  //      console.error('Ошибка:', textStatus, errorThrown);
+  //    }
+//});
+ //   return false;
+ // });
 
   
 
@@ -98,34 +125,34 @@ include "includes/internal-languages.php";
 <?php
 
 
-// URL вашего эндпоинта
-$url = 'http://127.0.0.1:5000/get_restaurants';
+// // URL вашего эндпоинта
+// $url = 'http://127.0.0.1:5000/get_restaurants';
 
-// Инициализация cURL
-$ch = curl_init($url);
+// // Инициализация cURL
+// $ch = curl_init($url);
 
-// Настройки запроса
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  // вернуть ответ в виде строки
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Accept: text/plain'
-]);
+// // Настройки запроса
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  // вернуть ответ в виде строки
+// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+// curl_setopt($ch, CURLOPT_HTTPHEADER, [
+//     'Accept: text/plain'
+// ]);
 
-// Выполнение запроса
-$response = curl_exec($ch);
+// // Выполнение запроса
+// $response = curl_exec($ch);
 
-// Проверка на ошибки
-if ($response === false) {
-    $error = curl_error($ch);
-    echo "cURL Error: $error";
-} else {
- // echo "<pre>";
- // var_dump($response);
- // echo"</pre>";
-}
+// // Проверка на ошибки
+// if ($response === false) {
+//     $error = curl_error($ch);
+//     echo "cURL Error: $error";
+// } else {
+//  // echo "<pre>";
+//  // var_dump($response);
+//  // echo"</pre>";
+// }
 
-// Закрываем сессию cURL
-curl_close($ch);
+// // Закрываем сессию cURL
+// curl_close($ch);
 
 
 
@@ -201,7 +228,7 @@ curl_close($ch);
               <div class="row">
                 <div class="col-sm-12">
                   <h2 class="module-title font-alt align-left"><?=$lang['makeorder'] ?></h2>
-                  <p class="module-subtitle font-serif align-left">Мы рады приветствовать вас на странице оформления заказа. Как только все поля будут заполнены правильно, заявка будет отправлена нашим кулинарам, которые смогут ее принять и обсудить все нюансы с вами лично в личном чате.</p>
+                  <p class="module-subtitle font-serif align-left"> <?=$lang['miradiprivetstovatvas'] ?> </p>
                 </div>
               </div>
               
