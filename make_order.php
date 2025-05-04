@@ -176,23 +176,23 @@ if (!headers_sent() && session_id() === '') {
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-1">  Приветствуем & добро пожаловать</div>
-                  <div class="font-alt mb-40 titan-title-size-4">Это приложение FoodAround</div><a class="section-scroll btn btn-border-w btn-round" href="#menu">Ознакомьтесь с нашим меню</a>
+                  <div class="font-alt mb-30 titan-title-size-1"> <?=$lang['helloandwelcome'] ?> </div>
+                  <div class="font-alt mb-40 titan-title-size-4"><?=$lang['helloandwelcome2'] ?> </div><a class="section-scroll btn btn-border-w btn-round" href="#menu"><?=$lang['helloandwelcome3'] ?></a>
                 </div>
               </div>
             </li>
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-2">FoodAround - это проект<br>который нацелен на людей и для людей</div><a class="btn btn-border-w btn-round" href="about.php">Познай фуд-индустрию</a>
+                  <div class="font-alt mb-30 titan-title-size-2"><?=$lang['helloandwelcome22'] ?></div><a class="btn btn-border-w btn-round" href="about.php"> <?=$lang['helloandwelcome33'] ?></a>
                 </div>
               </div>
             </li>
             <li class="bg-dark-30 restaurant-page-header bg-dark">
               <div class="titan-caption">
                 <div class="caption-content">
-                  <div class="font-alt mb-30 titan-title-size-1"> Взгляните </div>
-                  <div class="font-alt mb-40 titan-title-size-3">на наш функционал</div><a class="section-scroll btn btn-border-w btn-round" href="#specialities">Узнать больше</a>
+                  <div class="font-alt mb-30 titan-title-size-1"> <?=$lang['helloandwelcome100'] ?> </div>
+                  <div class="font-alt mb-40 titan-title-size-3"> <?=$lang['helloandwelcome101'] ?> </div><a class="section-scroll btn btn-border-w btn-round" href="#specialities"><?=$lang['helloandwelcome333'] ?></a>
                 </div>
               </div>
             </li>
@@ -208,7 +208,7 @@ if (!headers_sent() && session_id() === '') {
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt mb-0">Приятного аппетита</h2>
+                <h2 class="module-title font-alt mb-0"> <?=$lang['priyatnogoAppetita0405'] ?></h2>
               </div>
             </div>
           </div>
@@ -222,7 +222,7 @@ if (!headers_sent() && session_id() === '') {
 
             <div class="row">
               <div class="button_row">
-                <button id="getRest">ПОЛУЧИТЬ РЕСТОРАНЫ</button>
+                <button id="getRest"> <?=$lang['getrest0405'] ?></button>
                 <div id="restList"></div>
               </div>
             </div>
@@ -254,8 +254,8 @@ if (!headers_sent() && session_id() === '') {
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-clock"></i></div>
                     <select class="form-control input-lg" id="time" name="time" type="text" required="required">
-                      <option value="time" disabled="" selected="">Выберите время доставки</option>
-                      <input class="form-control input-lg" type="time" id="time" name="time" min="09:00" max="18:00" required>
+                      <option value="time" disabled="" selected=""><?=$lang['helloandwelcome102'] ?></option>
+                      <input class="form-control input-lg" type="time" id="time" name="time" min="09:00" max="20:00" required>
                     </select>
                   </div>
                 </div>
@@ -263,14 +263,14 @@ if (!headers_sent() && session_id() === '') {
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="product" name="product" placeholder="Название продукта/товара/изделия" required="required" data-validation-required-message="Введите название желаемого продукта/товара/изделия."/>
+                    <input class="form-control input-lg" type="text" id="product" name="product" placeholder="<?=$lang['helloandwelcome103'] ?>" required="required" data-validation-required-message="<?=$lang['helloandwelcome105'] ?>"/>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="description" name="description" placeholder="Описание вашего заказа" required="required" data-validation-required-message="Введите описание вашего заказа."/>
+                    <input class="form-control input-lg" type="text" id="description" name="description" placeholder="<?=$lang['helloandwelcome104'] ?>" required="required" data-validation-required-message="<?=$lang['helloandwelcome106'] ?>"/>
                   </div>
                 </div>
 

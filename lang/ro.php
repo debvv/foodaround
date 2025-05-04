@@ -147,3 +147,21 @@ $lang['3'] ='Obligațiile Utilizatorului';
 $lang['31'] ='3.1 Utilizatorul se angajează să nu încalce legile aplicabile atunci când utilizează Aplicația Web.';
 $lang['32'] ='3.2 Utilizatorul se angajează să nu utilizeze Aplicația Web în scopuri care pot cauza prejudicii Proprietarului, experților culinari sau altor Utilizatori.';
 $lang['33'] ='3.3 Utilizatorul se angajează să nu divulge datele personale ale experților culinari sau ale altor Utilizatori obținute prin utilizarea Aplicației Web.';
+
+
+$lang['getrest0405']             = 'Obține restaurante';
+$lang['priyatnogoAppetita0405']  = 'Poftă bună';
+$lang['helloandwelcome']         = 'Vă întâmpinăm & bine ați venit';
+$lang['helloandwelcome2']        = 'Aceasta este aplicația FoodAround';
+$lang['helloandwelcome3']        = 'Consultați meniul nostru';
+$lang['helloandwelcome22']       = 'FoodAround - un proiect<br>care se adresează oamenilor și este creat pentru oameni';
+$lang['helloandwelcome33']       = 'Descoperă industria alimentară';
+
+$lang['helloandwelcome333']      = 'Află mai multe';
+$lang['helloandwelcome100']      = 'Aruncați o privire';
+$lang['helloandwelcome101']      = 'la funcționalitățile noastre';
+$lang['helloandwelcome102']      = 'Alegeți ora livrării';
+$lang['helloandwelcome103']      = 'Denumirea produsului/articolului';
+$lang['helloandwelcome104']      = 'Descrierea comenzii dumneavoastră';
+$lang['helloandwelcome105']      = 'Introduceți denumirea produsului/articolului dorit.';
+$lang['helloandwelcome106']      = 'Introduceți descrierea comenzii dumneavoastră.';

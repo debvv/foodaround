@@ -147,3 +147,20 @@ $lang['3'] ='User Obligations';
 $lang['31'] ='3.1 The User undertakes not to violate applicable laws when using the Web Application.';
 $lang['32'] ='3.2 User undertakes not to use the Web Application for purposes that may cause harm to the Owner, culinary experts or other Users.';
 $lang['33'] ='3.3 The User undertakes not to disclose the personal data of culinary experts or other Users obtained through the use of the Web Application.';
+
+$lang['getrest0405']             = 'GET RESTAURANTS';
+$lang['priyatnogoAppetita0405']  = 'Enjoy your meal';
+$lang['helloandwelcome']         = 'Greetings & welcome';
+$lang['helloandwelcome2']        = 'This is the FoodAround app';
+$lang['helloandwelcome3']        = 'Browse our menu';
+$lang['helloandwelcome22']       = 'FoodAround is a project<br>aimed at people and for people';
+$lang['helloandwelcome33']       = 'Discover the food industry';
+
+$lang['helloandwelcome333']      = 'Learn more';
+$lang['helloandwelcome100']      = 'Take a look';
+$lang['helloandwelcome101']      = 'at our features';
+$lang['helloandwelcome102']      = 'Select delivery time';
+$lang['helloandwelcome103']      = 'Product/Item name';
+$lang['helloandwelcome104']      = 'Your order description';
+$lang['helloandwelcome105']      = 'Enter the name of the desired product/item.';
+$lang['helloandwelcome106']      = 'Enter your order description.';
