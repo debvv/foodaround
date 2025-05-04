@@ -78,7 +78,7 @@
             $result .= 'Thank You! We will reserve a table <i class="fa fa-smile"> in that date';
             $result .= '</div>';
 
-// 
+
             session_start();
 		include_once "config.php";
 
