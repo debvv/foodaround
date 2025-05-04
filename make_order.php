@@ -239,7 +239,7 @@ if (!headers_sent() && session_id() === '') {
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="name" name="name" placeholder="Ваше имя" required="required" data-validation-required-message="Пожалуйста введите своё имя."/>
+                    <input class="form-control input-lg" type="text" id="name" name="name" placeholder="<?=$lang['your_name'] ?>" required="required" data-validation-required-message="Пожалуйста введите своё имя."/>
                   </div>
                 </div>  
               
@@ -292,12 +292,12 @@ if (!headers_sent() && session_id() === '') {
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="icon-envelope"></i></div>
-                    <input class="form-control input-lg" type="text" id="address" name="address" placeholder="Ваш домашний адрес" required="required" data-validation-required-message="Пожалуйста введите свой домашний адрес."/>
+                    <input class="form-control input-lg" type="text" id="address" name="address" placeholder="<?=$lang['helloandwelcome1000'] ?>" required="required" data-validation-required-message="<?=$lang['helloandwelcome1010'] ?>"/>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"><i class="fa fa-paper-plane-o"></i> Зарезервировать</button>
+                  <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit"><i class="fa fa-paper-plane-o"></i> <?=$lang['helloandwelcome228'] ?></button>
                 </div>          
                 <div id="reservationFormResponse"></div>
               </form>
@@ -305,9 +305,9 @@ if (!headers_sent() && session_id() === '') {
    <!-- 9) Рекомендации -->
    <?php if($user_id): ?>
               <div class="mt-30">
-                <h4>Рекомендации для вас:</h4>
+                <h4><?=$lang['recommendations_for_you'] ?></h4>
                 <ul id="cf_recommendations"></ul>
-                <h4>Похожие заведения:</h4>
+                <h4><?=$lang['pohojie-zavedenia'] ?></h4>
                 <ul id="cb_recommendations"></ul>
               </div>
               <?php endif; ?>
@@ -376,7 +376,7 @@ if (!headers_sent() && session_id() === '') {
       url: `${API}/recommend`,
       method: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify({user_id: <?=$user_id?>})
+      data: JSON.stringify({user_id: < =$user_id?>})
     }).done(resp=>{
       $('#cf_recommendations').empty();
       resp.cf_recommendations.forEach(n=>{
