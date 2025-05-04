@@ -1,10 +1,139 @@
 <?php
 include "includes/internal-languages.php";
+// session_start(); // удаляем — сессия уже стартует в nav.php
+  // допустим, после логина в сессии у вас лежит unique_id:
+  $user_id = $_SESSION['unique_id'] ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <?php include_once "includes/head.php"; ?>
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+
+    const API = 'http://127.0.0.1:5000';
+     // 1) Загрузить список ресторанов в <select>
+     function loadRestaurants() {
+      $.get(`${API}/get_restaurants`, res => {
+        res.restaurants.forEach(r => {
+          $('#restaurant_id').append(
+            `<option value="${r.id}">${r.name}</option>`
+          );
+        });
+      });
+    }
+
+  // 2) При смене ресторана/даты/времени обновляем прогноз спроса
+  function updateDemand() {
+        const rid = +$('#restaurant_id').val();
+        const dt = $('#date').val();
+        const tm = $('#time').val();
+        if (!rid || !dt || !tm) return;
+        const d = new Date(`${dt}T${tm}`);
+        const hour = d.getHours();
+        const day = d.getDay();
+        const weekend = (day === 0 || day === 6) ? 1 : 0;
+
+        $.ajax({
+          url: `${API}/predict_demand`,
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ restaurant_id: rid, hour, day_of_week: day, is_weekend: weekend })
+        }).done(resp => {
+          $('#demandForecast')
+            .text(`Ожидаемый спрос: ${resp.prediction.toFixed(1)} заказов`)
+            .show();
+        });
+      }
+///////////
+
+
+    // Вариант 1: через $.ajax
+  $(document).on("click", "#getRest", function() {
+    console.log('CLICK BLYAT')
+    
+    // $.ajax({
+    //   url: 'http://127.0.0.1:5000/get_restaurants',    // адрес вашего эндпоинта
+    //   type: 'GET',
+    //   dataType: 'text',        // ожидаемый формат ответа (может быть 'html', 'text' и т.д.)
+    //   success: function(response) {
+    //     $("#restList").html(response)
+    //   },
+    //   error: function(jqXHR, textStatus, errorThrown) {
+    //     console.error('Ошибка:', textStatus, errorThrown);
+    //   }
+    // });
+
+
+    $.ajax({
+      // headers: { 
+      //   'Accept': 'application/json',
+      //   'Content-Type': 'application/json' 
+      // },
+      url: 'http://127.0.0.1:5000/recommend',    // адрес вашего эндпоинта
+      type: 'POST',
+      data: {
+        user_id : 1527932594
+      },
+      dataType: 'text',        // ожидаемый формат ответа (может быть 'html', 'text' и т.д.)
+      success: function(response) {
+        console.log(response)
+        $("#restList").html(response)
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Ошибка:', textStatus, errorThrown);
+      }
+    });
+    return false;
+  });
+
+  
+
+
+ </script>
+
+<?php
+
+
+// URL вашего эндпоинта
+$url = 'http://127.0.0.1:5000/get_restaurants';
+
+// Инициализация cURL
+$ch = curl_init($url);
+
+// Настройки запроса
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  // вернуть ответ в виде строки
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Accept: text/plain'
+]);
+
+// Выполнение запроса
+$response = curl_exec($ch);
+
+// Проверка на ошибки
+if ($response === false) {
+    $error = curl_error($ch);
+    echo "cURL Error: $error";
+} else {
+ // echo "<pre>";
+ // var_dump($response);
+ // echo"</pre>";
+}
+
+// Закрываем сессию cURL
+curl_close($ch);
+
+
+
+
+
+?>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
 
       <div class="page-loader">
@@ -61,6 +190,14 @@ include "includes/internal-languages.php";
         <section class="module pt-0 pb-0">
           <div class="row position-relative m-0">
             <div class="col-xs-12 col-md-6 side-image-text">
+
+            <div class="row">
+              <div class="button_row">
+                <button id="getRest">ПОЛУЧИТЬ РЕСТОРАНЫ</button>
+                <div id="restList"></div>
+              </div>
+            </div>
+
               <div class="row">
                 <div class="col-sm-12">
                   <h2 class="module-title font-alt align-left"><?=$lang['makeorder'] ?></h2>
@@ -135,6 +272,17 @@ include "includes/internal-languages.php";
                 </div>          
                 <div id="reservationFormResponse"></div>
               </form>
+
+   <!-- 9) Рекомендации -->
+   <?php if($user_id): ?>
+              <div class="mt-30">
+                <h4>Рекомендации для вас:</h4>
+                <ul id="cf_recommendations"></ul>
+                <h4>Похожие заведения:</h4>
+                <ul id="cb_recommendations"></ul>
+              </div>
+              <?php endif; ?>
+
             </div>
             <div class="col-xs-12 col-md-6 col-md-offset-6 side-image restaurant-image-overlay"></div>
           </div>
@@ -152,6 +300,73 @@ include "includes/internal-languages.php";
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
+
+    <?php include_once "includes/scripts.html"; ?>
+
+<!-- Подключаем jQuery, если его ещё нет -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const API = 'http://127.0.0.1:5000';
+
+  // 1) загрузить список ресторанов
+  function loadRestaurants(){
+    $.get(`${API}/get_restaurants`, res=>{
+      res.restaurants.forEach(r=>{
+        $('#restaurant_id')
+          .append(`<option value="${r.id}">${r.name}</option>`);
+      });
+    });
+  }
+
+  // 2) при смене ресторана/даты/времени — обновлять прогноз спроса
+  function updateDemand(){
+    const rid = $('#restaurant_id').val();
+    const dt = $('#date').val();
+    const tm = $('#time').val();
+    if(!rid || !dt||!tm) return;
+    const d = new Date(`${dt}T${tm}`);
+    const hour = d.getHours();
+    const day = d.getDay();          // 0–6, воскресенье=0
+    const weekend = (day===0||day===6)?1:0;
+    $.ajax({
+      url: `${API}/predict_demand`,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({restaurant_id: +rid, hour, day_of_week: day, is_weekend: weekend})
+    }).done(resp=>{
+      $('#demandForecast')
+        .text(`Ожидаемый спрос: ${resp.prediction.toFixed(1)} заказов`)
+        .show();
+    });
+  }
+
+  // 3) получить рекомендации (CF + CB)
+  function loadRecs(){
+    <?php if($user_id): ?>
+    $.ajax({
+      url: `${API}/recommend`,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({user_id: <?=$user_id?>})
+    }).done(resp=>{
+      $('#cf_recommendations').empty();
+      resp.cf_recommendations.forEach(n=>{
+        $('#cf_recommendations').append(`<li>${n}</li>`);
+      });
+      $('#cb_recommendations').empty();
+      resp.cb_recommendations.forEach(n=>{
+        $('#cb_recommendations').append(`<li>${n}</li>`);
+      });
+    });
+    <?php endif; ?>
+  }
+
+  $(function(){
+    loadRestaurants();
+    loadRecs();
+    $('#restaurant_id, #date, #time').on('change', updateDemand);
+  });
+</script>
  
     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU">
     </script>
