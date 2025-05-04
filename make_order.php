@@ -331,7 +331,7 @@ include "includes/internal-languages.php";
     <?php include_once "includes/scripts.html"; ?>
 
 <!-- Подключаем jQuery, если его ещё нет -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   const API = 'http://127.0.0.1:5000';
 
@@ -369,7 +369,7 @@ include "includes/internal-languages.php";
 
   // 3) получить рекомендации (CF + CB)
   function loadRecs(){
-    <?php if($user_id): ?>
+    <php if($user_id): ?>
     $.ajax({
       url: `${API}/recommend`,
       method: 'POST',
@@ -385,7 +385,7 @@ include "includes/internal-languages.php";
         $('#cb_recommendations').append(`<li>${n}</li>`);
       });
     });
-    <?php endif; ?>
+    <php endif; ?>
   }
 
   $(function(){
@@ -397,7 +397,7 @@ include "includes/internal-languages.php";
  
     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU">
     </script>
-    <?php include_once "includes/scripts.html"; ?>
+    <php include_once "includes/scripts.html"; ?> -->
     
   </body>
 </html>
