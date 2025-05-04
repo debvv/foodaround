@@ -149,7 +149,7 @@ $lang['32'] ='3.2 Utilizatorul se angajează să nu utilizeze Aplicația Web în
 $lang['33'] ='3.3 Utilizatorul se angajează să nu divulge datele personale ale experților culinari sau ale altor Utilizatori obținute prin utilizarea Aplicației Web.';
 
 
-$lang['getrest0405']             = 'Obține restaurante';
+$lang['getrest0405']             = 'OBȚINE RESTAURANTE';
 $lang['priyatnogoAppetita0405']  = 'Poftă bună';
 $lang['helloandwelcome']         = 'Vă întâmpinăm & bine ați venit';
 $lang['helloandwelcome2']        = 'Aceasta este aplicația FoodAround';
