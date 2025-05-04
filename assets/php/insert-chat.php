@@ -1,5 +1,9 @@
 <?php 
-    session_start();
+    
+    if (!headers_sent() && session_id() === '') {
+        session_start();
+    }
+    // ... rest of your code ...
     if(isset($_SESSION['unique_id'])){
         include_once "config.php";
         $outgoing_id = $_SESSION['unique_id'];

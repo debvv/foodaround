@@ -79,7 +79,9 @@
             $result .= '</div>';
 
 
-            session_start();
+            if (!headers_sent() && session_id() === '') {
+                  session_start();
+              }
 		include_once "config.php";
 
             $insert_query_order = mysqli_query($conn, "INSERT INTO `orders`(`time_date`, `name`, `from_id`, 

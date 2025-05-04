@@ -59,7 +59,9 @@
 		$result .= 'Спасибо! Мы будем на связи.';
 		$result .= '</div>';
 //      	
-		session_start();
+if (!headers_sent() && session_id() === '') {
+	session_start();
+}
 		include_once "config.php";
 		$name = mysqli_real_escape_string($conn, $_POST['name']);
 		$email = mysqli_real_escape_string($conn, $_POST['email']);

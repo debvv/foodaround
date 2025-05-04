@@ -2,11 +2,12 @@
 include "includes/internal-languages.php";
 ?>
 <?php
-    //session_start();
+    
     if (!headers_sent() && session_id() === '') {
         session_start();
     }
     //trying this like a fix for the issue with the session not being started
+    
     include_once "./assets/php/config.php";
     if(!isset($_SESSION['unique_id'])) {
 //              header("location: chatapp/login.php");

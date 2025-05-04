@@ -1,6 +1,8 @@
 <?php
 include "includes/internal-languages.php";
-// session_start(); // удаляем — сессия уже стартует в nav.php
+if (!headers_sent() && session_id() === '') {
+  session_start();
+}
   // допустим, после логина в сессии у вас лежит unique_id:
   $user_id = $_SESSION['unique_id'] ?? null;
 ?>

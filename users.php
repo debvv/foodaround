@@ -5,6 +5,7 @@ include "includes/internal-languages.php";
 <body>
 <?php include_once "includes/nav.php"; ?>
 <?php 
+
   // session_start();
   include_once "assets/php/config.php";
   if(!isset($_SESSION['unique_id'])){
@@ -13,7 +14,9 @@ include "includes/internal-languages.php";
  // else{
  //    header("location: ../index.php");
  // }
+
 ?>
+
   <div class="wrapper">
     <section class="users">
       <header>
