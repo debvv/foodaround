@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include "includes/internal-languages.php";
 if (!headers_sent() && session_id() === '') {
   session_start();
