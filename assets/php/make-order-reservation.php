@@ -1,6 +1,6 @@
 
 <?php
-    //  session_start();
+      
       $errors = array();
 
       // Check if date has been entered
